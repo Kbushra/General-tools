@@ -1,0 +1,182 @@
+title_instructions_1,---INSTRUCTIONS---,---INSTRUCCIONES---
+title_instructions_2,[{a} or {b}] - Confirm,[{a} o {b}] - Confirmar
+title_instructions_3,[{a} or {b}] - Cancel/Run,[{a} o {b}] - Cancelar/Correr
+title_instructions_4,[{a} or {b}] - In-game menu,[{a} o {b}] - Menu del Juego
+title_instructions_5,[{a}] - Fullscreen,[{a}] - Pantalla Completa
+title_instructions_6,[Esc] - Hold to exit,[Esc] - Mantener para cerrar el juego
+title_instructions_7,"When HP is 0, you lose.","Cuando tus PS llegan a 0, pierdes."
+saving_geno,/1_{a}/* {b} left.,/1_{a}/* Quedan {b}.
+saving_genodone,/1_{a}/* Determination.,/1_{a}/* Determinación.
+saving_ruins_entrance,"* The moss and cracks spark a long, receding passion.",* El moho y las grietas despiertan una extraña pasión dentro de ti.
+saving_ruins_leaf,"* In the silence of the room, a rustle of leaves pierce through.","* En el silencio del cuarto, el crujido de las hojas destaca mas que todo."
+saving_ruins_mouse,"* Knowing that one day, you'll be able to meet the mouse...","* Saber que, algún día, podrás conocer al ratón..."
+saving_ruins_home,* The building before you calms your nerves.,* El extraño hogar frente tuyo calma tus nervios.
+saving,* You are filled with determination.,* Te llena de determinación.
+saving_level,LV {a},NV {a}
+saving_choice_1,Save,Guardar
+saving_choice_2,Return,Volver
+saving_success,* Saved...,* Partida Guardada...
+saving_chara,/1_9/* How did Frisk use this thing?,/1_9/* ¿Como es que Frisk usa esto?
+savepoint_1,Flower bed,Cama de Flores
+savepoint_2,Ruins - Entrance,Ruinas - Entrada
+savepoint_3,Ruins - Leaf Pile,Ruinas - Pila de Hojas
+savepoint_4,Ruins - Mouse Hole,Ruinas - Agujero de ratón
+savepoint_5,Ruins - Home,Ruinas - Hogar
+option_confirm,Yes,Si
+option_deny,No,No
+cut_genotext,* But nobody came...,* Pero nadie vino...
+cut_intro_fallen_1,/2_0/* I feel... weird.,/2_0/* Que... mareo...
+cut_intro_fallen_1_alt,/2_0/* Weird... again?,/2_0/* ¿Qué? ¿Otra vez?
+cut_intro_fallen_2,/1_0/* Heya.,/1_0/* Ey.
+cut_intro_fallen_3,/1_0/* You've been laying there for a while.,/1_0/* Llevas ahí un buen rato.
+cut_intro_fallen_3_alt,/1_0/* Feels like you've been there longer...,/1_0/* Parece que tu llevas ahí mas tiempo...
+cut_intro_fallen_4,"/2_0/* Oh. Yeah, sorry Chara.","/2_0/* Oh. Claro, perdón Chara."
+cut_intro_fallen_5,"/1_0/* It's alright, Frisk.","/1_0/* Está bien, Frisk."
+cut_intro_fallen_6,/2_1/* Our names - do we know each other?,/2_1/* ¿Nuestro nombres... - nos conocemos?
+cut_intro_fallen_6_alt,/2_1/* I feel that I've known you before.,/2_1/* Siento que te he conocido antes.
+cut_intro_fallen_7,/1_5/* Huh...,/1_5/* Que raro...
+cut_intro_fallen_8,/3_0/* hOI im flowey!&* flowey the flOoooOooOoOOOOwer.,/3_0/* HOLIII SOY FLOWEY&* Flowey la flOooooOOOor :P
+cut_intro_fallen_9,/1_0/* Is that a talking flower? NO WAY!,/1_0/* Esa flor habla? NO TE LO CREO.
+cut_intro_fallen_10,/3_0/* Cmon gOys!&* Follow mEeEEE-,/3_0/* Vengan!&* Siganmeeeee-
+cut_intro_fallen_11,/3_0/* Dis wayyy-,/3_0/* X akiiii-
+cut_intro_follow_1,/1_0/* I see no harm in following!,/1_0/* ¡No sé que podría salir mal!
+cut_intro_follow_2,/1_7/* Thats a good door...,/1_0/* Que linda puerta...
+cut_intro_follow_3,/2_1/* Good door?,/1_0/* Linda... ¿puerta?
+cut_intro_follow_3_alt,/2_1/* Are they always like that?,/2_1/* ¿Siempre eres así? o...
+cut_intro_follow_4,/2_4/* Chara.,/2_4/* ...Chara.
+cut_intro_follow_4_alt,/2_0/* Chara...,/2_4/* ...Chara...
+cut_intro_flowey_1,/3_0/* Do u wanna lern 2 FIGHT?,/3_0/* Kieres aprnder a PELEAR?
+cut_intro_flowey_2,"/1_0/* Sure thing, talking flower!","/1_0/* ¡Obvio, flor que habla!"
+cut_intro_flowey_3,/2_1/* Wait but-,/2_1/* Espera pero-
+cut_intro_flowey_3_alt,"/2_1/* Actually, I-","/2_1/* De hecho, yo-"
+cut_intro_floweyend_1,"/1_8/* That was... interesting, to say the least.","/1_8/* Eso fue... interesante, digamos."
+cut_intro_floweyend_2,/2_0/* ...,/2_0/* ...
+cut_firstsave_1,/1_0/* What was that thing you did?,/1_0/* ¿Que fué eso que hiciste?
+cut_firstsave_2,/2_1/* Just some magic.,/2_1/* Solo un poco de magia.
+cut_firstsave_3,"/1_0/* C'mon, tell me more!","/1_0/* Vamos, ¡Dime más!"
+cut_firstsave_4,/2_0/* It... uh...&* Keeps me alive?,/2_0/* Me... eh...&* ¿Me mantiene con vida?
+cut_firstsave_5,"/1_9/* Huh, sounds... familiar...",/1_9/* Suena... familiar...
+int_ruins_general_doorsign_1,* The text is too worn out to read.,* El texto está tan desgastado que es ilegible.
+int_ruins_general_doorsign_readable_1,* This sign reads:,* Este letrero dice:
+int_ruins_general_lever_1,* The lever has been stuck shut.,* La palanca está atascada.
+int_ruins_puzzle2_sign_1,* There's a note on it.,* Hay una nota en el cartel.
+int_ruins_puzzle2_sign_2,* {qt}There was not enough budget to repair this sign.{qt},* {qt}No hubo suficiente presupuesto pare reparar este cartel.{qt}
+int_ruins_subpath1_sign_1,* {qt}All construction workers must maintain an IQ above 50.{qt},* {qt}Todos los obreros tienen que mantener una IQ sobre 50.{qt}
+int_ruins_subpath1_sign_2,* {qt}Please solve this trivial problem to confirm your status.{qt},"* {qt}Por favor, resuelva este problema trivial para confirmar tu inteligencia.{qt}"
+int_ruins_subpath1_sign_hint_1,* {qt}Your hint is: Stay in the light.{qt},* {qt}Tu pista es: Mantente en la luz.{qt}
+int_ruins_subpath2_sign_1,* {qt}Congrats! You have passed the IQ test{qt},* {qt}¡Felicidades! Aprobaste el examen de IQ.{qt}
+int_ruins_subpath2_sign_2,* {qt}What flavour of pie would you like?{qt},* {qt}¿Que sabor de tarta te gustaría?{qt}
+int_ruins_subpath2_sign_3,/!!/,/!!/
+int_ruins_subpath2_sign_4,Cinnamon,Canela
+int_ruins_subpath2_sign_5,BScotch,Manzana
+int_ruins_subpath2_sign_6,"* {qt}Regardless, you are not getting pie. Get back to work.{qt}","* {qt}De cualquier manera, no hay tarta para ti. Vuelve al trabajo.{qt}"
+int_ruins_puzzle3_rock_1,* A gigantic rock blocks you.,* Una roca gigante bloquea tu camino.
+int_ruins_puzzle3_wallsign_1,* You can just make out some words.,* Solo puedes leer algunas partes.
+int_ruins_puzzle3_wallsign_2,* {qt}wes----- is e----- --pr--{qt},* {qt}El cam--- oes-- es e- cam--- es--{qt}
+int_ruins_subpath3_sign_1,* There are no spiders in this shop.,* No hay arañas en esta tienda.
+int_ruins_subpath3_wallsign_1,* This sign has been tampered with.,* Este letrero fue vandalizado.
+int_ruins_subpath3_wallsign_2,* {qt}Da tEms alWas preVal!&U neveR gEt riD of Us!{qt},* {qt}loS teMs sIEmpre ganAn!&nuNCA acaVarAn con nOSOTRES.{qt}
+cut_ruins_emptyhallway_1,"/2_4/* I'm not walking this entire hallway, am I.","/2_4/* ¿No voy a caminar por todo este pasillo, verdad?"
+int_ruins_dustroom_sign_1,/2_0/* {qt}To those who died in The Event.{qt},/2_0/* {qt}Para aquellos que murieron en El Evento.{qt}
+int_ruins_dustroom_sign_2,"/1_8/* Well, thats a mood killer.","/1_8/* Bueno, nos mataron el ánimo."
+int_ruins_dustroom_powder_1,* You arent sure what this is.,* No estás seguro de si es cocaína o polvo.
+int_ruins_dustroom_powder_2,/?/* Pick up Mystery Dust?,/?/* ¿Agarrar el Polvo Misterioso?
+int_ruins_dustroom_powder_3,* It coated your pockets.,* Se esparció por tus bolsillos.
+int_ruins_candyroom_candy_1,* Look! Candy!,"* ¡Mira, caramelos!"
+int_ruins_candyroom_candy_2,/?/* Devour it?,/?/* ¿Devorarlos?
+int_ruins_candyroom_candy_3,* Candy get!,* ¡Caramelo obtenido!
+int_ruins_candyroom_candy_4,/1_9/* You ruined it.,/1_9/* Lo arruinaste.
+int_ruins_rockroom2_rock_1,* Ye want me to move too?,* Quereís que me mueva también?
+int_ruins_rockroom2_rock_2,* Well I can't no more.,* Ya no me quedan juerzas.
+int_ruins_mousesave_table_1,"/2_5/* Aww, the mouse ate the cheese!","/2_5/* ¡Aww, el ratón se comió el queso!"
+int_ruins_mousesave_hole_1,/1_3/* The mouse moved out!,/1_3/* ¡El ratón se mudó!
+int_ruins_mousesave_hole_2,/1_7/* Tiny door...,/1_7/* Puerta enana...
+cut_ruins_jelletonne_1,"/2_1/* Hey, calm down, no need to get so destructive.","/2_1/* Ey, cálmate, no hay por qué ser tan destructivos."
+cut_ruins_jelletonne_2,$1* WIBBLE WOBBLE!!!,"$1  *Meneo, meneo*"
+cut_ruins_jelletonne_3,"/1_1/* Frisk, we might have to fight this thing.","/1_1/* Frisk, tal vez tengamos que pelear con esta cosa."
+cut_ruins_jelletonnespare_1,"/1_0/* If it's made of jelly, how did it break that wall?","/1_1/* Si es de gelatina, ¿cómo rompió esa pared?"
+cut_ruins_jelletonnespare_2,"/2_0/* At this point, I've learnt not to question stuff.","/1_1/* A este punto, aprendí a no cuestionar las cosas."
+cut_ruins_jelletonnespare_3,/2_1/* Let's just use it's path.,/2_1/* Solo usemos el camino que dejó.
+cut_ruins_jelletonnespare_4,* Frisk learnt how to not question stuff.,* Frisk aprendió a no cuestionar las cosas.
+cut_ruins_jelletonnekill_1,/2_0/$1* T-That killed it?,/2_0/$1* ¿E-eso lo mató?
+cut_ruins_jelletonnekill_2,/2_0/$1* I didn't know!&* It was just a stick!,/2_0/$1* ¡No sabía!&* ¡Era solo un palo!
+cut_ruins_jelletonnekill_3,"/2_0/* (You're so stupid, Frisk.)","/2_0/* (Eres tán idiota, Frisk.)"
+cut_ruins_jelletonnekill_4,/1_2/* (We took it too far.),/1_2/* (Lo llevamos demasiado lejos.)
+int_ruins_spidershop_1,* There are spiders working around the webs.,* Hay arañas trabajando por las telarañas.
+int_ruins_spidershop_2_a,/?/* Leave 7G in their domain?,/?/* ¿Dejar 7G en su rincón?
+int_ruins_spidershop_2_b,/?/* Leave 18G in their domain?,/?/* ¿Dejar 18G en su rincón?
+int_ruins_spidershop_3_a,* They gave you a donut.,* Te dieron una dona.
+int_ruins_spidershop_3_b,* They gave you a cider.,* Te dieron una sidra.
+int_ruins_spidershop_note_1,* The sign reads:,* El letrero dice:
+int_ruins_spidershop_note_2,* {qt}Killing off these spiders is hard work.{qt},* {qt}Matar a estas arañas es una tarea ardua.{qt}
+int_ruins_spidershop_note_3,* {qt}We have an exterminator but the pesks keep coming back.{qt},"* {qt}Tenemos un fumigador, pero siempre vuelven.{qt}"
+int_ruins_monsterpath_froggit_1,"* Ribbit, ribbit.&* (I watch through these cracks.)","* Ribit, ribit.&* (Yo miro por grietas.)"
+int_ruins_monsterpath_froggit_2,* (They're mine.)&* (Go away.),* (Son mías.)&* (Lárgate.)
+int_ruins_fallpuzzle3_sign_1,* You can just make out some words.,* Solo puedes leer algunas partes.
+int_ruins_fallpuzzle3_sign_2,* {qt}is... switch...{qt},* {qt}est... rruptor...{qt}
+int_ruins_fallpuzzle3_lever_1,* You force the switch open.,* Encendiste el interruptor por la fuerza.
+int_ruins_fallpuzzle3_lever_2,* ...,* ...
+int_ruins_fallpuzzle3_ribbon_1,* This ribbon looks barely usable.,* Esta bufanda apenas se puede usar.
+int_ruins_fallpuzzle3_ribbon_2,/?/* Pick up the item?,/?/* ¿Agarrarla?
+int_ruins_fallpuzzle3_ribbon_3,* You got the Tacky Ribbon!,* Obtuviste la Bufanda Tosca!
+int_ruins_balconyentrance_veg_1,* I'm hiding from the Tems.,* Me escondo de los Tems.
+int_ruins_balconyentrance_veg_2,* Please help me.,* Por favor ayudenme.
+int_ruins_balconyentrance_veg_3,/2_0/* What's a {qt}Tem{qt}?,/2_0/* ¿Que es un {qt}Tem{qt}?
+int_ruins_balcony_toy_1,* A toy knife watches out into the distance.,* Un cuchillo de juguete mira hacia la distancia.
+int_ruins_balcony_toy_2,/?/* Pick it up?,/?/* ¿Agarrarlo?
+int_ruins_balcony_toy_3,* You got the Toy Knife!,* ¡Obtuviste el Cuchillo de Juguete!
+int_ruins_homesave_rocks_1,* This pile of rocks has some real craftsmanship.,* Esta pila de rocas tienen un alto nivel de artesanía.
+cut_home_enter_1,"/1_1/* Frisk, look! We're home!","/1_1/* ¡Mira, Frisk! ¡Estamos en casa!"
+cut_home_enter_2,"/1_0/* Ok, maybe not OUR home, but I'm fine with this.","/1_0/* Bueno, tal vez no NUESTRA casa, pero me conformo."
+cut_home_enter_3,/2_0/* This might be the only place we get to rest here.,/2_0/* Este tal vez sea el unico lugar donde podremos descansar.
+cut_home_enter_4,/2_1/* And I'm tired out of my mind.,/2_1/* Y estoy que me desmayo.
+cut_home_enter_4_alt,/2_1/* And I feel even more tired than usual.,/2_1/* Y estoy mas cansade que lo normal.
+cut_home_enter_5,/2_4/* Better get good sleep here.&* Wheres the bedroom?,/2_4/* Voy a dormir aquí.&* ¿Donde hay un cama?
+int_home_vase_1,/1_3/* It's my favourite vase!,/1_3/* ¡Es my jarrón favorito!
+int_home_vase_2,/1_9/* Wait... how?&* I've never been here.,/1_9/* Espera... ¿cómo?&* Nunca he estado aquí.
+int_home_smallbooks_1,/1_1/* No one can resist a cat book.,/1_1/* Nadie se puede resistir a un libro de gatos.
+cut_home_noleaving_1,/1_8/* I can't leave Frisk behind.,/1_8/* No puedo dejar a Frisk atrás.
+cut_home_noleaving_1_alt,/1_8/* I'm not supposed to go this way.,/1_8/* No debería ir por ahí.
+int_home_table_1,/1_0/* I wish I had a table like this.,/1_0/* Ojalá tener una mesa así.
+int_home_fireplace_1,/1_8/* It's extinguished.,/1_8/* El fuego esta extinguido.
+int_home_chariel_1,/1_1/* This is the comfiest chair to ever exist.,/1_1/* La silla mas cómoda que jamas ha existido.
+int_home_books_1,/1_0/* Lets see here...,/1_0/* Veamos...
+int_home_books_2,/1_8/* The Gun...,/1_8/* La Pistola...
+int_home_books_3,/1_8/* The Gun II - Electric Boogaloo...,/1_8/* La Pistola II - El Hijo de la Pistola...
+int_home_books_4,/1_8/* The Gun III - Return Of The Gun...,/1_8/* La Pistola III - La Rebelión de las Pistolas...
+int_home_books_5,/1_8/* The Gun IV - 4th Book In The Trilogy...,/1_8/* La Pistola IV - Cuarto Libro En La Trilogía...
+int_home_books_6,/1_9/* The Gun V - Money Money Money..!,"/1_8/* La Pistola V - Dinero, Dinero, Dinero..!"
+int_home_books_7,/1_5/* ...That's enough.,/1_5/* ...Eso es suficiente.
+int_home_pie_1,/1_0/* Oooh! That pie looks delicious.,/1_0/* ¡Uuu! Esa tarta se ve deliciosa.
+int_home_pie_2,/1_1/* Chocolate would have been better though.,/1_1/* Pero chocolate hubiera sido mejor...
+int_home_pie_3,/?/* Take some?,/?/* ¿Llevarse un pedazo?
+int_home_pie_4,/1_0/* Freshly baked!,/1_0/* ¡Recién hecho!
+int_home_fridge_1,/1_9/* I'm noticing a lack of chocolate here.,/1_9/* Estoy viendo una falta de chocolate aquí.
+int_home_plant1_1,"/1_1/* Sausage plant, meet pot plant.","/1_1/* Planta salchicha, te presento a la planta de maceta."
+int_home_plant2_1,/1_0/* Impressive wildlife!,/1_0/* ¡Impresionante vida silvestre!
+int_home_plant3_1,/1_1/* A golden pot plant?&* That's real wealth.,/1_1/* Una planta dorada de maceta?&* Que lujo.
+int_home_plant4_1,/1_5/* A sausage plant.&* How funny.,/1_5/* Kigelia africana.&* Parece una salchicha!&* Jaja...
+int_home_mirror_1,/1_9/* Why can't I see myself?,/1_9/* ¿Por qué no me veo a mí?
+int_home_mirror_2,/1_9/* I don't like the implications.,/1_9/* No me gusta lo que eso implica.
+int_home_renovation_1,/1_8/* Room cancelled?&* How do you cancel a room?,/1_8/* ¿Cuarto cancelado?&* ¿Como se cancela un cuarto?
+int_home_trash_1,/1_0/* Inside the trashcan...&* Is trash!,/1_0/* Dentro del bote de basura...&* ¡Hay basura!
+int_home_trash_2,/1_5/* I'm not joking.,/1_5/* No estoy bromeando.
+int_home_diary_1,/1_5/* A book.&* A book on the history of Tems.,/1_5/* Un libro.&* Un libro de la historia de los Temmies.
+int_home_diary_2,/1_5/* Fun.,/1_5/* Curioso.
+int_home_teribooks_1,/1_0/* This bookshelf is sure to be loaded with knowledge!,/1_0/* ¡Esta repisa seguro esta repleta de conocimiento!
+int_home_teribooks_2,/1_5/* ...,/1_5/* ...
+int_home_teribooks_3,/1_0/* Cooking recipes!&* Very mundane!,/1_0/* ¡Recetas de cocina!&* ¡Que aburrido!
+int_home_teribed_1,/1_0/* This bed makes me think of buttercups.,/1_0/* Esta cama me hace pensar en... renúnculos.
+int_home_drawer_1,/1_9/* Are these clothes even used?,/1_9/* ¿Siquiera se usa esta ropa?
+int_home_plant5,/1_1/* Me and the bean plant.,/1_1/* Yo y la planta de frijoles.
+int_home_plant6,"/1_0/* Deadly wildlife!&* If I had an enemy, this'd be perfect!","/1_0/* Vida silvestre mortal!&* ¡Si tuviera un enemigo, esta sería perfecta!"
+int_home_box_1,/1_5/* Who's shoes are these?,/1_5/* ¿De quien son estos zapatos?
+int_home_photo_1,"/1_9/* This doesn't bring back any memories, somehow.","/1_9/* Esto no me da recuerdos, de alguna manera."
+int_home_photo_2,/1_8/* Is the frame missing something?,/1_8/* ¿No le falta algo al marco?
+int_home_clothes_1,/1_0/* These clothes?&* To hold me?,/1_0/* ¿Esta ropa?&* ¿Para sostenerme a mí?
+int_home_toys_1,/1_0/* I like these toys!,/1_0/* Me gustan estos juguetes!
+int_home_friskbed_1,"/1_5/* Frisk, wake up!","/1_5/* Frisk, despierta!"
+int_home_friskbed_2,/2_0/* Mmmmm.,/2_0/* Mmmmm.
+int_home_friskbed_3,/2_1/* No.,/2_1/* No.
+int_home_friskbed_4,/1_8/* Damn.,"/1_8/* Wow, bueno..."
+int_home_friskbed_5,/1_5/* Guess I'll go by myself then.,/1_5/* Supongo que voy sole entonces.

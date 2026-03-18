@@ -1,0 +1,142 @@
+gameover_1,You cannot give up just yet.,No te puedes rendir ahora.
+gameover_2,I know you can do better.,Se que puedes hacerlo mejor.
+gameover_3,Come on!,¡Vamos!
+gameover_4,Stay determined!,¡Mantén tu derminación!
+ui_1,LV {a},NV {a}
+ui_2,HP,PS
+ui_3,{a} / {b},{a} / {b}
+button_fight_miss,Miss,Fallo
+button_mercy_1,* Spare,* Perdonar
+button_mercy_2,* Flee,* Huir
+battle_win,* You won!&* You got {a}.,* ¡Ganaste!&* Obtuviste {a}.
+battle_flee_1,* Escaped...,* Escapaste...
+battle_flee_2,* Escaped with {a}...,* Escapaste con {a}...
+battle_rewards_1,{a} EXP and {b} gold{c},{a} EXP y {b} de oro{c}
+battle_rewards_2,", levelling up!",", ¡subiendo de nivel!"
+button_act_1,* Check,* Examinar
+button_item_1,PAGE 1,PÁGINA 1
+button_item_2,PAGE 2,PÁGINA 2
+button_magic_1,(MAIN),(PRINCIPAL)
+button_magic_2,COST:,COSTO:
+button_magic_3,HP,PS
+caster_frisk_cast_1,Shatter,Romper
+caster_frisk_cast_2,Dash,Lanzarse
+caster_frisk_cast_3,Absorb,Absorber
+caster_frisk_desc_1,Press {a} or {b} to break all non-yellow bullets in a {c} pixel radius.,Presiona {a} or {b} para romper todos los proyectiles blancos en un radio de {c} píxeles.
+caster_frisk_desc_2,Press {a} or {b} to dash for a max of {c} times.,"Presiona {a} or {b} para lanzarse rapido en una dirección, un máximo de {c} veces."
+caster_frisk_desc_3,"The more hp you lose, the higher chance you aren't hurt when hit. (Worsens over time)","Entre más PS pierdes, es más probable que las balas no te hagan daño. (Empeora con el tiempo)"
+caster_chara_cast_1,Karma,Karma
+caster_chara_cast_2,Runner,Correr
+caster_chara_desc_1,"Until hit, every{a} second{b}, deal 2% more damage when fighting.","Hasta recibir un golpe, cada{a} segundo{b}, harás 2% más daño el siguiente turno."
+caster_chara_desc_2,Hold {a} or {b} to run for {c} seconds total.,Presiona {a} or {b} para correr por {c} segundos en total.
+caster_cast_text,* You achieved {a} and took {b} damage.,* Hiciste el hechizo {a} y recibiste {b} de daño.
+introtext_general_1,* {a} and {b} came close!,* {a} y {b} se acercaron!
+introtext_general_2,"* {a}, {b} and {c} attacked!","* {a}, {b} y {c} atacan!"
+introtext_genocide,* But nobody came...,* Pero nadie vino...
+customblub_flowey_1,See dat heart?&Dat soul! Keep soul aliv!,Ves ese korason?&Esa alma! Manten alma biva!!
+customblub_flowey_2,I once had a soul...,Yo tuve un alma una vez...
+customblub_flowey_3,No touchy da white white!&Ur soul fragil.,El blanco no tokar!&tu alma frajil.
+customblub_flowey_4,Look!&I send white white.,Mira!&T tiro csitas blankas&:P
+customblub_flowey_5,Oh.&Das not gud.,Oh.&Ezo no es bno...
+customblub_flowey_6,Can I... trust hoomans?,Puedo... confiar en los humanos?
+customblub_flowey_7,No...,No...
+customblub_flowey_8,Hooman? Stop plas...,"Para, plis..."
+customblub_flowey_9,I won't risk it!&I can't risk it.,NO M ARRIESGO&No puedo aserlo...
+introtext_froggit_1,* Froggit hopped close!,* ¡Froggit brincó hacia aquí!
+introtext_froggit_2,* Two Froggits hopped close!,* ¡Dos Froggits brincaron hacia aquí!
+introtext_froggit_3,* How!? Three Froggits!,* ¿¡Como!? ¡Tres Froggits!
+flavourtext_froggit_1_1,* It's Froggit.,* Es Froggit.
+flavourtext_froggit_1_2,* Smells like Froggit.,* Huele a Froggit.
+flavourtext_froggit_1_3,"* Guys, I think it's Froggit.","* Chicos, creo que es Froggit."
+flavourtext_froggit_1_4,"* hOI Froggit, me DAD.",* Froggit no sabe que pensar de tí.
+flavourtext_froggit_1_5,* You wonder what's hiding under Froggit's legs.,* Te preguntas que se esconde debajo de las piernas de Froggit.
+flavourtext_froggit_1_6,* Found you Froggit!,* ¡Te encontré Froggit!
+flavourtext_froggit_1_7,"* It's a shiny! Wait, wrong game.","* ¡Es un shiny! Uy, juego equivocado."
+flavourtext_froggit_1_8,* What's he saying again?,* ¿Que esta diciendo?
+flavourtext_froggit_2_1,* It's two Froggits.,* Son dos Froggits.
+flavourtext_froggit_2_2,* Smells like a lake...,* Huele como un lago.
+flavourtext_froggit_2_3,"* Guys, I think they're frogs.","* Chicos, creo que son ranas."
+flavourtext_froggit_2_4,"* hOI FroggitS, me DAD.","* Charlan entre si, no les entiendes nada."
+flavourtext_froggit_2_5,* You wonder what's hiding under Froggit's legs.,* Te preguntas que se esconde debajo de las piernas de Froggit.
+flavourtext_froggit_2_6,* Found you Froggit!,* ¡Te encontré Froggit!
+flavourtext_froggit_3_1,* How?,* ¿Como?
+flavourtext_froggit_3_2,* RARE EVENT SPOTTED.,* EVENTO POCO PROBABLE.
+dialogue_froggit_1,"Ribbit, ribbit.&(hOI, HOOMAN!!!!)","Ribit, ribit.&(HOLII, HUMANE!!!!)"
+dialogue_froggit_2,"Ribbit, ribbit, rib.&(me name froggit!!!!!)","Ribit, ribit, rib.&(mi nmbre es froggit!!!!!)"
+dialogue_froggit_3,*Sexy frog noises*,*Sonidos sexy de rana*
+actdialogue_froggit_1,*Blushes deeply*&Ribbit...,*Se sonroja*&Ribit...
+actdialogue_froggit_2,"*Shaking*&RIBBIT, RIBBIT!?","*Temblando*&RIBIT, RIBIT!?"
+acttext_froggit_1,"* Froggit didn't understand what you said, but was flattered anyway.","* Froggit no entendió lo que dijiste, pero se sintió alagado igual."
+acttext_froggit_2,"* Froggit didn't understand what you said, but was scared anyway.","* Froggit no entendió lo que dijiste, pero se asustó igual."
+act_froggit_1,Compliment,Alagar
+act_froggit_2,Threat,Amenazar
+infotext_froggit,* Froggit - ATK 4 DEF 5&* Life is difficult for this enemy.,* Froggit - ATQ 4 DEF 5&* La vida es dificil para este enemigo.
+flavourtext_migosp_1_1,* {qt}Love peer pressure!{qt}&- Migosp 2024,* {qt}Amo la presión social!{qt}&- Migosp 2024
+flavourtext_migosp_1_2,* {qt}Hi random stranger!{qt}&- Migosp 2024,* {qt}Hola extraño!{qt}&- Migosp 2024
+flavourtext_migosp_1_3,* {qt}Lets be friends!{qt}&- Migosp 2024,* {qt}Seamos amigos!{qt}&- Migosp 2024
+flavourtext_migosp_1_4,* {qt}Telekenesis is fun!{qt}&- Migosp 2024,* {qt}La telequinesis es divertida!{qt}&- Migosp 2024
+flavourtext_migosp_1_5,* {qt}Teamwork makes the dreamwork!{qt}&- Migosp 2024,* {qt}Los sueños se cumplen con el trabajo en equipo!{qt}&- Migosp 2024
+flavourtext_migosp_1_6,* {qt}Groups = Dreams!{qt}&- Migosp 2024,* {qt}Grupos = Sueños!{qt}&- Migosp 2024
+dialogue_migosp_1,Love the booze yall!,"¡Amo el alcohol, gente!"
+dialogue_migosp_2,I'm high!,¡Me siento con vida!
+actdialogue_migosp_1,Never say that again.,No vuelvas a decir eso.
+acttext_migosp_1,* You ask Migosp an embarrasing question.&* They prepare to chop you in half.,* Le haces a Migosp una pregunta vergonzosa.&* El se prepara para golpearte.
+act_migosp_1,Talk,Hablar
+infotext_migosp,* MIGOSP - ATK 6 DEF 8&* Has two sides.,* MIGOSP - ATQ 6 DEF 8&* Tiene dos lados.
+introtext_migospdance_1,* Migosp skipped close!,* ¡Migosp se acerca a saltitos!
+flavourtext_migospdance_1_1,* Migosp unleashed!,* ¡Migosp desatado!
+flavourtext_migospdance_1_2,* Migosp got the groove.,* Migosp siente el ritmo.
+flavourtext_migospdance_1_3,* Immaculate dance moves are audible from Migosp.,* Se pueden escuchar los increibles pasos de Migosp.
+dialogue_migospdance_1,Dance like it's July!,¡Baila como si fuera Julio!
+dialogue_migospdance_2,Cha cha cha~,Cha cha cha~
+dialogue_migospdance_3,Held back no more!,¡Nada me detiene ahora!
+actdialogue_migospdance_1,We'll never stop!,¡Nunca vamos a parar!
+acttext_migospdance_1,* You dance to the beat.,* Bailas al ritmo de la música.
+act_migospdance_1,Dance,Bailar
+infotext_migospdance,* MIGOSP - ATK 6 DEF 8&* Loves to dance.,* MIGOSP - ATQ 6 DEF 8&* Ama bailar
+introtext_cateye_1,* Cymophane.,* Cimofana.
+introtext_cateye_2,* Temmie eyes.,* Ojos de Temmie.
+introtext_cateye_3,* Living metal?,* ¿Metal viviente?
+flavourtext_cateye_1_1,* Is this a reference?!,* ¡¿Acaso es una referencia?!
+flavourtext_cateye_1_2,* Eye Sees All.,* El Ojo Lo Ve Todo.
+flavourtext_cateye_1_3,* Can cat eyes stare into your soul?&* Because Cymophane is.,* Puede un ojo de gato mirar tu alma?&* Porque Cimofana esta haciendo.
+flavourtext_cateye_2_1,* Is this a reference?!&* A heavy metal reference?!,* Acaso es una referencia?!&* Una referencia al heavy metal?!
+flavourtext_cateye_2_2,* Eye Sees All.&* Do you see it?,* El Ojo Lo Ve Todo.&* ¿Tu la ves a ella?
+flavourtext_cateye_2_3,* Their tem faces pierce through skin.,* Sus caras de Tem pueden atravesar la piel.
+flavourtext_cateye_3_1,* Is this a reference?!&* A heavy metal reference?!,* ¡¿Acaso es una referencia?!&* ¡¿Una referencia al heavy metal?!
+flavourtext_cateye_3_2,* Eye Sees All.&* Do you see it?&* I can.,* El Ojo Lo Ve Todo.&* ¿Tu la ves a ella?&* Yo sí.
+flavourtext_cateye_3_3,* An abomination.,* Una abominación.
+dialogue_cateye_1,Tem see u...,Tem verte a ti...
+dialogue_cateye_2,Tem think tem blink too much.,Tem piensa q tem pestaña demaziado.
+dialogue_cateye_3,WHERE TEM'S MOUTH,DONDE ESTA LA BOCA D TEM.
+actdialogue_cateye_1,Poor tem is angy now.,Pobre tem esta molesta ahora :(
+actdialogue_cateye_2,Woag! Tem like!,¡Wowq! ¡A tem le gusta!
+acttext_cateye_1,* You tell Cymophane that it looks weird.&* The room feels electric.,* Le dices a Cimofana que se ve rara.&* El cuarto se siente eléctrico.
+acttext_cateye_2,* You keep quiet.&* It smiles.,* Te callas.&* Ella sonríe.
+act_cateye_1,Pick On,Burlarse
+act_cateye_2,Pick On't,No burlarse
+infotext_cateye,* CYMOPHANE - ATK 5 DEF 5&* Awkward.,* CIMOFANA - ATQ 5 DEF 5&* Incómodo.
+introtext_jelletonne_1,* That's a tonne of jelly.,* Eso es un montón de gelatina.
+flavourtext_jelletonne_1_1,* It wiggles in opposite directions.,* Se menea en direcciones opuestas.
+flavourtext_jelletonne_1_2,* It twitches uncomfortably.,* Se retuerce incómodamente.
+flavourtext_jelletonne_1_3,* It's just a bit big.,* Solo es un poco grande.
+flavourtext_jelletonne_1_4,* It seems like a hybrid of sorts.,* Parece como un híbrido o algo así.
+flavourtext_jelletonne_1_5,* What a buffet of jelly!,* ¡Que festín de gelatina!
+flavourtext_jelletonne_1_6,* The jelly speaks wisdom.,* La gelatina habla sabiamente.
+flavourtext_jelletonne_1_7,* Inside the jelly is more jelly.,"* Dentro de la gelatina, hay más gelatina."
+flavourtext_jelletonne_1_8,* May tides of jelly be upon you.,* Que la gelatina esté de tu lado.
+flavourtext_jelletonne_1_9,* Someone has to clean up the jelly.&* And it isn't me.,* Alguien tiene que limpiar la gelatina.&* Y no voy a ser yo.
+dialogue_jelletonne_1,*Goofy goober vibes*,*Vibras de rawr xd*
+dialogue_jelletonne_2,Splat! (Goes the jelly!),*Se menea de manera sexy*
+dialogue_jelletonne_3,"Twitch, twitch (Me, no me!)","Splat, splat (Yo, no yo!)"
+actdialogue_jelletonne_1,Wiggle (I couldn't.),Woba (No podría.)
+actdialogue_jelletonne_1b,Wiggle woggle (I'll wait your turn),"Woba, woba (Voy a esperar a tu turno)"
+actdialogue_jelletonne_1c,Wiggle wiggle (I can!),"Woba woba (Si, puedo!)"
+actdialogue_jelletonne_2,Woogle (So fuzzy...),Wob wob (Tan cómodo...)
+acttext_jelletonne_1,"* You dance, but Jelletonne is uncomfortable.","* Bailas, pero Gelatón se siente incomodo."
+acttext_jelletonne_1b,"* You dance, but Jelletonne doesn't understand yet.","* Bailas, pero Gelatón no entiende aún."
+acttext_jelletonne_1c,"* You dance, and Jelletonne gets into the flow!","* Bailas, y Gelatón se te une en el flow!"
+acttext_jelletonne_2,* Jelletonne feels warm from your touch.,* Gelatón se siente cálido.
+act_jelletonne_1,Dance,Bailar
+act_jelletonne_2,Feel,Sentir
+infotext_jelletonne,* JELLETONNE - ATK 4 DEF 4&* Weak but heavy. A TON of jelly.,"* GELATÓN - ATQ 4 DEF 4&* Débil, pero pesado. Un MONTÓN de gelatina."

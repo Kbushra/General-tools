@@ -1,0 +1,12 @@
+//Lettering scheme
+Variables/Functions use snake_case, macros are SNAKE_CASE_CAPS.
+(macro exceptions: keywords, functions)
+
+//Prefix meanings
+game- = General game manager objects
+trig- = Trigger objects for collisions and interactions
+
+parent- = Objects made only to be a parent (does not need to work in-game)
+debug- = Debug objects (not meant for final version)
+
+These prefixes are standard: obj, spr, tl, sq, scr, sh, pth, snd, ac, fnt, ps
