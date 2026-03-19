@@ -1,6 +1,3 @@
-//Flags get their own script
-//Items get their own script
-
 enum pathfinderStates
 {
 	none,

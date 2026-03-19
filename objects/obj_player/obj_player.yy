@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_trig_slope",
-    "path":"sprites/spr_trig_slope/spr_trig_slope.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

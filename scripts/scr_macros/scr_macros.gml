@@ -1,5 +1,3 @@
-//Constants
-
 #macro GAME_WIDTH (game_camera.size.w)
 #macro GAME_HEIGHT (game_camera.size.h)
 
