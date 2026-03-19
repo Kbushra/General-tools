@@ -16,31 +16,25 @@ height = size.h;
 scale = size.gui_scale;
 display_set_gui_size(width / scale, height / scale);
 
-if !global.respawn
-{
-	window_set_size(wide.w, wide.h);
-	window_center();
-}
+window_set_size(width, height);
+window_center();
 
 xoffset = width / 2;
 yoffset = height / 2;
 zoom = 1;
 
-targetOffset = 10;
+target_offset = 10;
 
-targetX = xstart;
-targetY = ystart;
+target_x = xstart;
+target_y = ystart;
 
-prevTargetX = targetX;
-prevTargetY = targetY;
-
-progressX = 0;
-progressY = 0;
+progress_x = 0;
+progress_y = 0;
 
 view = 0;
 
 custom = false;
-shakeIntensity = 0;
+shake_intensity = 0;
 
 event_user(0);
 

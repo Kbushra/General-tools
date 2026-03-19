@@ -1,5 +1,6 @@
 if keyboard_check_pressed(vk_f4) { window_set_fullscreen(!window_get_fullscreen()); }
 depth = -99999999999;
+
 if custom { exit; }
 
 if got_place_signal("goto_spawn")
@@ -15,10 +16,8 @@ if got_place_signal("goto_spawn")
 }
 
 cam_dimensions();
-cam_target_frisk();
+cam_target_player();
 cam_ease_pos();
 
-cam_set_zoom_offsets();
 cam_clamp();
-
 cam_set();

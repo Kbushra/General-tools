@@ -4,7 +4,6 @@ draw_set_colour(c_black);
 draw_rectangle(0, 0, GAME_WIDTH_SQUARE, GAME_HEIGHT_SQUARE, false);
 draw_set_colour(c_white);
 
-draw_set_font(fntUndertale);
 draw_set_halign(fa_middle);
 draw_set_valign(fa_center);
 

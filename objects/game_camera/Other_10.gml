@@ -1,8 +1,8 @@
 ///@func cam_set([view])
 cam_set = function(view = 0)
 {
-	var xShake = random_range(-shakeIntensity, shakeIntensity);
-	var yShake = random_range(-shakeIntensity, shakeIntensity);
+	var xShake = random_range(-shake_intensity, shake_intensity);
+	var yShake = random_range(-shake_intensity, shake_intensity);
 	
 	camera_set_view_size(view_camera[view], width / zoom, height / zoom);
 	camera_set_view_pos(view_camera[view], x - xoffset + xShake, y - yoffset + yShake);
@@ -11,8 +11,8 @@ cam_set = function(view = 0)
 ///@func cam_dimensions()
 cam_dimensions = function()
 {
-	var prevXOffset = xoffset;
-	var prevYOffset = yoffset;
+	var prev_xoffset = xoffset;
+	var prev_yoffset = yoffset;
 	
 	width = size.w;
 	height = size.h;
@@ -23,47 +23,40 @@ cam_dimensions = function()
 	xoffset = width/2;
 	yoffset = height/2;
 	
-	x += (xoffset - prevXOffset) / 2;
-	y += (yoffset - prevYOffset) / 2;
+	x += (xoffset - prev_xoffset) / 2;
+	y += (yoffset - prev_yoffset) / 2;
 }
 
-///@func cam_target_frisk()
-cam_target_frisk = function()
+///@func cam_target_player()
+cam_target_player = function()
 {
-	targetX = obj_player.x + targetOffset * obj_player.hsp;
-	targetY = obj_player.y + targetOffset * obj_player.vsp;
-
-	if obj_player.prevHsp != obj_player.hsp
+	target_x = obj_player.x + target_offset * obj_player.hsp;
+	target_y = obj_player.y + target_offset * obj_player.vsp;
+	
+	if obj_player.prev_hsp != obj_player.hsp
 	{
 	    xstart = x;
-	    progressX = 0;
+	    progress_x = 0;
 	}
 
-	if obj_player.prevVsp != obj_player.vsp
+	if obj_player.prev_vsp != obj_player.vsp
 	{
 	    ystart = y;
-	    progressY = 0;
+	    progress_y = 0;
 	}
 }
 
 ///@func cam_ease_pos()
 cam_ease_pos = function()
 {
-	if targetX > x { x = floor(exponential_out(xstart, targetX, progressX, 3)); }
-	    else { x = ceil(exponential_out(xstart, targetX, progressX, 3)); }
+	if target_x > x { x = floor(exponential_out(xstart, target_x, progress_x, 3)); }
+	    else { x = ceil(exponential_out(xstart, target_x, progress_x, 3)); }
 
-	if targetY > y { y = floor(exponential_out(ystart, targetY, progressY, 3)); }
-	    else { y = ceil(exponential_out(ystart, targetY, progressY, 3)); }
+	if target_y > y { y = floor(exponential_out(ystart, target_y, progress_y, 3)); }
+	    else { y = ceil(exponential_out(ystart, target_y, progress_y, 3)); }
 
-	progressX += 0.02;
-	progressY += 0.02;
-}
-
-///@func cam_set_zoom_offsets()
-cam_set_zoom_offsets = function()
-{
-	xoffsetZoom = xoffset - (zoom - 1) * (xoffset / zoom);
-	yoffsetZoom = yoffset - (zoom - 1) * (yoffset / zoom);
+	progress_x += 0.02;
+	progress_y += 0.02;
 }
 
 ///@func cam_clamp()

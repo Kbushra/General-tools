@@ -2,21 +2,16 @@ print("audio created");
 
 image_alpha = 0;
 
-areaMusic = NONE;
+area_music = NONE;
 
-emitterBGM = audio_emitter_create();
-emitterSFX = audio_emitter_create();
+emitter_bgm = audio_emitter_create();
+emitter_sfx = audio_emitter_create();
 
-busBGM = audio_bus_create();
-busSFX = audio_bus_create();
+bus_bgm = audio_bus_create();
+bus_sfx = audio_bus_create();
 
-audio_emitter_bus(emitterBGM, busBGM);
-audio_emitter_bus(emitterSFX, busSFX);
-
-ini_open("options.ini");
-audio_emitter_gain(emitterBGM, ini_read_real("audio", "bgm volume", 1));
-audio_emitter_gain(emitterSFX, ini_read_real("audio", "sfx volume", 1));
-ini_close();
+audio_emitter_bus(emitter_bgm, bus_bgm);
+audio_emitter_bus(emitter_sfx, bus_sfx);
 
 log = false;
 if !variable_global_exists("debugMute") global.debugMute = false;

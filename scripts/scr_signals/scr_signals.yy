@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_signals",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_signals",
+  "parent":{
+    "name":"Variables",
+    "path":"folders/Scripts/Variables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
