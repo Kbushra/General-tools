@@ -20,7 +20,7 @@ function move_until_collide(dx, dy, obj)
 }
 
 //Returns if the x movement or y movement is still going
-function move_towards_point_straight(_x, _y, _speed, _prev_moving = [true, true])
+function move_towards_point_ordinal(_x, _y, _speed, _prev_moving = [true, true])
 {
 	if !_prev_moving[0] { _x = x; }
 	if !_prev_moving[1] { _y = y; }
