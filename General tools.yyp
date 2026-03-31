@@ -59,6 +59,7 @@
     {"id":{"name":"scr_cache","path":"scripts/scr_cache/scr_cache.yy",},},
     {"id":{"name":"scr_collision","path":"scripts/scr_collision/scr_collision.yy",},},
     {"id":{"name":"scr_compatibility","path":"scripts/scr_compatibility/scr_compatibility.yy",},},
+    {"id":{"name":"scr_constructors","path":"scripts/scr_constructors/scr_constructors.yy",},},
     {"id":{"name":"scr_drawing","path":"scripts/scr_drawing/scr_drawing.yy",},},
     {"id":{"name":"scr_enums","path":"scripts/scr_enums/scr_enums.yy",},},
     {"id":{"name":"scr_instance_creating","path":"scripts/scr_instance_creating/scr_instance_creating.yy",},},

@@ -24,7 +24,7 @@ function cache_write_prop(_name, _value, _id = calculate_id())
 }
 
 ///@param name {string}
-///@param default_value {string}
+///@param default_value {any}
 ///@param instance_id {string}
 function cache_read_prop(_name, _default, _id = calculate_id())
 {

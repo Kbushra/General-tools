@@ -37,6 +37,7 @@
     {"name":"scr_cache","order":2,"path":"scripts/scr_cache/scr_cache.yy",},
     {"name":"scr_collision","order":17,"path":"scripts/scr_collision/scr_collision.yy",},
     {"name":"scr_compatibility","order":3,"path":"scripts/scr_compatibility/scr_compatibility.yy",},
+    {"name":"scr_constructors","order":2,"path":"scripts/scr_constructors/scr_constructors.yy",},
     {"name":"scr_drawing","order":15,"path":"scripts/scr_drawing/scr_drawing.yy",},
     {"name":"scr_enums","order":1,"path":"scripts/scr_enums/scr_enums.yy",},
     {"name":"scr_instance_creating","order":14,"path":"scripts/scr_instance_creating/scr_instance_creating.yy",},
