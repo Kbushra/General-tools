@@ -24,16 +24,11 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Triggers/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"desktop.ini","CopyToMask":-1,"filePath":"datafiles","name":"desktop.ini","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"lang - battle.csv","CopyToMask":-1,"filePath":"datafiles","name":"lang - battle.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"lang - gui.csv","CopyToMask":-1,"filePath":"datafiles","name":"lang - gui.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"lang - overworld.csv","CopyToMask":-1,"filePath":"datafiles","name":"lang - overworld.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-  ],
+  "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.4.221",
   },
   "name":"General tools",
   "resources":[

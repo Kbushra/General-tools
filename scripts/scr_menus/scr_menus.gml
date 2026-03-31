@@ -1,5 +1,7 @@
 function move_selection(selection, limit, dir)
 {
+	var prev_selection = selection;
+	
 	if dir == HORIZONTAL
 	{
 		selection += game_input.right_pressed - game_input.left_pressed;

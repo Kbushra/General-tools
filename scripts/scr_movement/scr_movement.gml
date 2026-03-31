@@ -1,3 +1,9 @@
+function coordinate(_x, _y) constructor
+{
+	x = _x;
+	y = _y;
+}
+
 function move_until_collide(dx, dy, obj)
 {
 	var x_coll = false;
@@ -13,24 +19,25 @@ function move_until_collide(dx, dy, obj)
 		if x_inst == noone && sign(dx) != 0 { x += x_coll ? 0 : sign(dx); } else { x_coll = true; }
 		if y_inst == noone && sign(dy) != 0 { y += y_coll ? 0 : sign(dy); } else { y_coll = true; }
 		
-		if x_coll && y_coll { return [x_inst, y_inst]; } //Collided fully
+		if x_coll && y_coll { return { coll_x: x_inst, coll_y: y_inst }; } //Collided fully
 	}
 	
-	return [x_inst, y_inst];
+	return { coll_x: x_inst, coll_y: y_inst };
 }
 
 //Returns if the x movement or y movement is still going
-function move_towards_point_ordinal(_x, _y, _speed, _prev_moving = [true, true])
+function move_towards_point_ordinal(_coord, _speed, _prev_moving = [true, true])
 {
-	if !_prev_moving[0] { _x = x; }
-	if !_prev_moving[1] { _y = y; }
+	if !_prev_moving[0] { _coord.x = x; }
+	if !_prev_moving[1] { _coord.y = y; }
 	
-	var sign_x = sign(_x - x);
-	var sign_y = sign(_y - y);
+	var sign_x = sign(_coord.x - x);
+	var sign_y = sign(_coord.y - y);
 	x += sign_x * _speed;
 	y += sign_y * _speed;
 	
-	var new_sign_x = sign(_x - x);
-	var new_sign_y = sign(_y - y);
-	return [new_sign_x == sign_x && sign_x != 0, new_sign_y == sign_y && sign_y != 0];
+	var new_sign_x = sign(_coord.x - x);
+	var new_sign_y = sign(_coord.y - y);
+	return { moving_in_x: new_sign_x == sign_x && sign_x != 0,
+		moving_in_y: new_sign_y == sign_y && sign_y != 0 };
 }

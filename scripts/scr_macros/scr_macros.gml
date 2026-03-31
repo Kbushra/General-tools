@@ -1,5 +1,5 @@
-#macro GAME_WIDTH (game_camera.size.w)
-#macro GAME_HEIGHT (game_camera.size.h)
+#macro GAME_WIDTH (instance_exists(game_camera) ? game_camera.size.w : 320)
+#macro GAME_HEIGHT (instance_exists(game_camera) ? game_camera.size.h : 240)
 
 #macro GAME_WIDTH_SQUARE 720
 #macro GAME_HEIGHT_SQUARE 480
