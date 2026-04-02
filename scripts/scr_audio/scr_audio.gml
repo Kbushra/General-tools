@@ -44,7 +44,7 @@ function resume_bgm()
 ///@func play_sfx
 function play_sfx(sound, gain = 1, priority = 0)
 {
-    if !audio_exists(sound) { exit; }
+    if !audio_exists(sound) { return NONE; }
     return audio_play_sound_on(game_audio.emitter_sfx, sound, false, priority, gain);
 }
 
