@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_drawing",
+  "%Name":"scr_easing",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_drawing",
+  "name":"scr_easing",
   "parent":{
-    "name":"Drawing",
-    "path":"folders/Scripts/Drawing.yy",
+    "name":"Math",
+    "path":"folders/Scripts/Math.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

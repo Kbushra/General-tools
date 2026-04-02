@@ -1,6 +1,6 @@
 ///@desc Methods
 
-///@func start_area_music()
+///@func start_bgm()
 start_bgm = function()
 {
 	var bgm = NONE;
