@@ -3,6 +3,7 @@
   "%Name":"game_saver",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"game_saver",
@@ -11,8 +12,11 @@
     "name":"Managers",
     "path":"folders/Managers.yy",
   },
-  "parentObjectId":null,
-  "persistent":false,
+  "parentObjectId":{
+    "name":"parent_game",
+    "path":"objects/parent_game/parent_game.yy",
+  },
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -30,9 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_saver",
-    "path":"sprites/spr_saver/spr_saver.yy",
+    "name":"sprSave",
+    "path":"sprites/sprSave/sprSave.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

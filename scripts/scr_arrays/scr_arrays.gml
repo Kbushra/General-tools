@@ -8,6 +8,7 @@ function array_push_unique(_arr)
 	}
 }
 
+//only for perfect 2d arrays rn
 function array_length_flattened(arr)
 {
 	var count = 0;

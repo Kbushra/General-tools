@@ -15,8 +15,8 @@
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Drawing","folderPath":"folders/Scripts/Drawing.yy","name":"Drawing","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Math","folderPath":"folders/Scripts/Math.yy","name":"Math","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Macros, enums, constructors","folderPath":"folders/Scripts/Macros, enums, constructors.yy","name":"Macros, enums, constructors","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Math","folderPath":"folders/Scripts/Math.yy","name":"Math","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Saving","folderPath":"folders/Scripts/Saving.yy","name":"Saving","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Variables","folderPath":"folders/Scripts/Variables.yy","name":"Variables","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Shaders","folderPath":"folders/Shaders.yy","name":"Shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.221",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"General tools",
   "resources":[
@@ -95,6 +95,7 @@
     {"id":{"name":"spr_trig_solid","path":"sprites/spr_trig_solid/spr_trig_solid.yy",},},
     {"id":{"name":"spr_trig_spawn","path":"sprites/spr_trig_spawn/spr_trig_spawn.yy",},},
     {"id":{"name":"spr_trig_template","path":"sprites/spr_trig_template/spr_trig_template.yy",},},
+    {"id":{"name":"sprSave","path":"sprites/sprSave/sprSave.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
