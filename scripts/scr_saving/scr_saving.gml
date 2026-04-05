@@ -3,6 +3,7 @@ function default_save()
 	var struct =
 	{
 		compatibility_version: 0,
+		language: lang.en,
 		cache: {}
 	};
 	

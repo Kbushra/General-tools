@@ -17,3 +17,5 @@ enum carrierTarget
 	instance,
 	place
 }
+
+enum lang { en }
