@@ -31,7 +31,7 @@ function send_persistent_package(_id, _package_name, _target_type, _value)
 	
 	if carrier == noone
 	{
-		var carrier = instance_create_depth(0, 0, 0, game_carrier,
+		carrier = instance_create_depth(0, 0, 0, game_carrier,
 			{ name: _package_name, value: _value, value_type: carrierValue.package,
 				target: _id, target_type: _target_type });
 	}

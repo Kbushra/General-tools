@@ -10,7 +10,7 @@ uniform vec2 padding;
 
 float multiply(float channel1, float channel2)
 {
-	return 2.0 * channel1 * channel2;
+	return channel1 * channel2;
 }
 
 void main()
