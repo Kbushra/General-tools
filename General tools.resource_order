@@ -55,6 +55,8 @@
     {"name":"scr_strings","order":18,"path":"scripts/scr_strings/scr_strings.yy",},
     {"name":"scr_typewriter","order":3,"path":"scripts/scr_typewriter/scr_typewriter.yy",},
     {"name":"scr_wrapper","order":12,"path":"scripts/scr_wrapper/scr_wrapper.yy",},
+    {"name":"sh_multiply","order":2,"path":"shaders/sh_multiply/sh_multiply.yy",},
+    {"name":"sh_screen","order":1,"path":"shaders/sh_screen/sh_screen.yy",},
     {"name":"spr_asserter","order":9,"path":"sprites/spr_asserter/spr_asserter.yy",},
     {"name":"spr_audio","order":14,"path":"sprites/spr_audio/spr_audio.yy",},
     {"name":"spr_camera","order":7,"path":"sprites/spr_camera/spr_camera.yy",},
