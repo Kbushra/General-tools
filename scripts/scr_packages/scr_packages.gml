@@ -25,14 +25,14 @@ function send_persistent_package(_id, _package_name, _target_type, _value)
 	
 	with (game_carrier)
 	{
-		if value_type == carrierValue.package && target_type == _target_type &&
+		if value_type == carrier_value.package && target_type == _target_type &&
 			target == _id && name == _package_name { value = _value; carrier = id; }
 	}
 	
 	if carrier == noone
 	{
 		carrier = instance_create_depth(0, 0, 0, game_carrier,
-			{ name: _package_name, value: _value, value_type: carrierValue.package,
+			{ name: _package_name, value: _value, value_type: carrier_value.package,
 				target: _id, target_type: _target_type });
 	}
 	
@@ -49,7 +49,7 @@ function send_persistent_package(_id, _package_name, _target_type, _value)
 ///@desc To send a package to the entire room
 function send_place_package(_package_name, _value)
 {
-	return send_persistent_package(room, _package_name, carrierTarget.place, _value);
+	return send_persistent_package(room, _package_name, carrier_target.place, _value);
 }
 
 ///@func package_contents(package_name)
@@ -69,7 +69,7 @@ function place_package_contents(_package_name)
 {
 	with (game_carrier)
 	{
-		if value_type == carrierValue.package && target_type == carrierTarget.place &&
+		if value_type == carrier_value.package && target_type == carrier_target.place &&
 			room == target && name == _package_name { return value; }
 	}
 	
@@ -92,7 +92,7 @@ function remove_place_package(_package_name)
 {
 	with (game_carrier)
 	{
-		if value_type == carrierValue.package && target_type == carrierTarget.place &&
+		if value_type == carrier_value.package && target_type == carrier_target.place &&
 			room == target && name == _package_name { instance_destroy(); }
 	}
 }

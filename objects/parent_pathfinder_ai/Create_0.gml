@@ -1,19 +1,25 @@
 send_place_signal("pathfind");
 
-state = pathfinderStates.freeroam;
+next_coord = new coordinate(0, 0);
+moving = new moving_state(false, false);
 
-next = NONE; //NONE means not evaluated yet, [] means nowhere to go next
-moving = [false, false];
+dir = cache_read_prop("dir", "d");
+axis = cache_read_prop("axis", HORIZONTAL);
+sprite_index = get_sprite(name, "idle");
 
 spd = 1;
 
 event_user(0);
+event_user(1);
 
-freeroam_dist = RAND_FREEROAM;
+freeroam_dist = 0;
 freeroam_delay = 0;
 freeroam_x = 0;
 freeroam_y = 0;
+state = pathfinder_states.freeroam;
 
-if path != noone { state = pathfinderStates.roam; exit; }
+roam_transition();
+freeroam_delay = 0;
 
-setup_freeroam();
+x = cache_read_prop("x", x);
+y = cache_read_prop("y", y);

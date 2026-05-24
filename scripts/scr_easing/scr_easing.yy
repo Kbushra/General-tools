@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_easing",
   "parent":{
-    "name":"Math",
-    "path":"folders/Scripts/Math.yy",
+    "name":"Maths",
+    "path":"folders/Scripts/Maths.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSave",
-    "path":"sprites/sprSave/sprSave.yy",
+    "name":"spr_saver",
+    "path":"sprites/spr_saver/spr_saver.yy",
   },
   "spriteMaskId":null,
   "visible":true,

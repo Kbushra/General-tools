@@ -1,3 +1,15 @@
+function get_sprite(_character = character, _action = action, _dir = dir)
+{ return asset_get_index($"spr_{_character}_{_action}_{_dir}"); }
+
+/*function force_dir(dir, axis = game_input.axis)
+{
+	game_input.first_direction = dir;
+	game_input.face_direction = dir;
+	obj_player.dir = dir;
+	
+	game_input.axis = axis;
+}*/
+
 function get_dir(_num_x, _num_y, priority_axis) 
 {
 	var _num1 = priority_axis == HORIZONTAL ? _num_x : _num_y;

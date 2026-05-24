@@ -18,6 +18,28 @@ function load_language_csv(name)
 	return { grid: _grid, keys: _keys };
 }
 
+///@func language_string(key, csv, format args...)
+function language_string(_key, _csv_id) constructor
+{
+	key = _key;
+	csv_id = _csv_id;
+	for (var i = 2; i < argument_count; i++) { format_args[i - 2] = argument[i]; }
+	
+	language = NONE;
+	loaded_string = "";
+	
+	///@func load()
+	load = function()
+	{
+		if language == global.save.language { return loaded_string; }
+		
+		//Will move find_text into here later
+		loaded_string = script_execute_ext(find_text, array_concat([key, csv_id], format_args));
+		language = global.save.language;
+		return loaded_string;
+	}
+}
+
 ///@func find_text(key, type, [a], ...)
 ///@param key Key for the text to find
 ///@param type CSV file to look in
@@ -26,12 +48,33 @@ function load_language_csv(name)
 function find_text(key, type)
 {
 	var text = "";
-	var translation_keys = game_languages.language_keys;
-	var translation_grid = game_languages.language_grid;
+	var translation_keys = noone; var translation_grid = noone;
+	
+	switch (type)
+	{
+		case csv.overworld:
+		translation_keys = global.overworld_keys;
+		translation_grid = global.overworld_grid;
+		break;
+		
+		case csv.battle:
+		translation_keys = global.battle_keys;
+		translation_grid = global.battle_grid;
+		break;
+		
+		case csv.gui:
+		translation_keys = global.gui_keys; 
+		translation_grid = global.gui_grid;
+		break;
+		
+		default:
+		assert(false, "Invalid type given in find_text!");
+		return "";
+	}
 	
 	if translation_keys[? key] == undefined { return key; }
 	
-	text = translation_grid[# 1 + global.save.language, translation_keys[? key]];
+	text = translation_grid[# 1 + global.config.language, translation_keys[? key]];
 	text = clean_csv_text(text);
 		
 	for (var i = 2; i < argument_count; i++)

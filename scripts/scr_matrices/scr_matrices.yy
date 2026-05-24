@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_math_utility",
+  "%Name":"scr_matrices",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_math_utility",
+  "name":"scr_matrices",
   "parent":{
     "name":"Maths",
     "path":"folders/Scripts/Maths.yy",

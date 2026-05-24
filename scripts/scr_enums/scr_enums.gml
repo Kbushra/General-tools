@@ -1,4 +1,10 @@
-enum pathfinderStates
+enum player_states
+{
+	normal,
+	freeze
+}
+
+enum pathfinder_states
 {
 	none,
 	freeroam,
@@ -6,13 +12,13 @@ enum pathfinderStates
 	chase
 }
 
-enum carrierValue
+enum carrier_value
 {
 	signal,
 	package
 }
 
-enum carrierTarget
+enum carrier_target
 {
 	instance,
 	place

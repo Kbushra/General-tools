@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_languages",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Macros, enums, constructors",
+    "path":"folders/Scripts/Macros, enums, constructors.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -8,7 +8,7 @@ source_y = 0;
 source_tile_x = floor(source_x / tile_size);
 source_tile_y = floor(source_y / tile_size);
 
-interval = 15;
+interval = 30;
 max_distance = ceil((GAME_WIDTH/tile_size) / 2) + 5; //Only calculates tiles from that far away
 
 max_weight = 1;

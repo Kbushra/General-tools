@@ -1,5 +1,13 @@
 ///@desc Methods
 
+///@func tile_free(tile_x, tile_y)
+tile_free = function(tile_x, tile_y)
+{
+	var room_x = tile_size/2 + tile_x * tile_size;
+	var room_y = tile_size/2 + tile_y * tile_size;
+	return place_free(room_x, room_y) && !place_meeting(room_x, room_y, trig_freeroam_block);
+}
+
 ///@func neighbours(tile_x, tile_y)
 function neighbours(tile_x, tile_y)
 {
@@ -9,25 +17,19 @@ function neighbours(tile_x, tile_y)
 	{
 		for (var j = -1; j <= 1; j++)
 		{
-			if (i == 0 && j == 0) { continue; }
+			if i == 0 && j == 0 { continue; }
 			
-			var coll = !place_free(tile_size/2 + (tile_x + i) * tile_size,
-			tile_size/2 + (tile_y + j) * tile_size);
-			
-			//Adjacent tile on X not colliding
-			coll = coll || !place_free(tile_size/2 + (tile_x + i) * tile_size,
-			tile_size/2 + tile_y * tile_size);
-			
-			//Adjacent tile on Y not colliding
-			coll = coll || !place_free(tile_size/2 + tile_x * tile_size,
-			tile_size/2 + (tile_y + j) * tile_size);
+			var free = tile_free(tile_x + i, tile_y + j);
+			var free = free && tile_free(tile_x + i, tile_y);
+			var free = free && tile_free(tile_x, tile_y + j);
 			
 			var x_in_bounds = false;
 			var y_in_bounds = false;
 			x_in_bounds = tile_x + i >= 0 && tile_x + i < array_length(nodes);
 			if x_in_bounds { y_in_bounds = tile_y + j >= 0 && tile_y + j < array_length(nodes[tile_x + i]); }
 			
-			if (x_in_bounds && y_in_bounds && !coll) { array_push(new_arr, [tile_x + i, tile_y + j]); }
+			if x_in_bounds && y_in_bounds && free
+			{ array_push(new_arr, new coordinate(tile_x + i, tile_y + j)); }
 		}
 	}
 	
@@ -41,22 +43,22 @@ function set_weights(tile_x, tile_y, nbs)
 	
 	for (var i = 0; i < array_length(nbs); i++)
 	{
-		var nb_inds = nbs[i];
-		var dist_x = nb_inds[0] - tile_x;
-		var dist_y = nb_inds[1] - tile_y;
+		var nb_coord = nbs[i];
+		var dist_x = nb_coord.x - tile_x;
+		var dist_y = nb_coord.y - tile_y;
 		var dist = sqrt(power(dist_x, 2) + power(dist_y, 2));
 		
 		var final_weight = nodes[tile_x][tile_y].weight + dist;
-		var targ_node = nodes[nb_inds[0]][nb_inds[1]];
+		var targ_node = nodes[nb_coord.x][nb_coord.y];
 		
-		if (targ_node.weight != NONE && targ_node.weight <= final_weight) { continue; }
+		if targ_node.weight != NONE && targ_node.weight <= final_weight { continue; }
 		
 		if final_weight > max_weight { max_weight = final_weight; }
 		
-		var to_end = sqrt(power(source_tile_x - nb_inds[0], 2) + power(source_tile_y - nb_inds[1], 2));
+		var to_end = point_distance(source_tile_x, source_tile_y, nb_coord.x, nb_coord.y);
 		targ_node.weight = final_weight;
 		targ_node.priority = final_weight + to_end;
-		array_push(changed_nbs, nb_inds);
+		array_push(changed_nbs, nb_coord);
 	}
 	
 	return changed_nbs;
@@ -71,11 +73,11 @@ function reset_nodes()
 		{
 			nodes[i][j] =
 			{
-				x: tile_size/2 + i*tile_size,
-				y: tile_size/2 + j*tile_size,
+				x: tile_size/2 + i*tile_size, //in room
+				y: tile_size/2 + j*tile_size, //in room
 				weight: NONE,
 				priority: NONE,
-				next: []
+				next_nodes: []
 			};
 		}
 	}
@@ -86,7 +88,8 @@ function reset_nodes()
 ///@func evaluate_weights()
 function evaluate_weights()
 {
-	var queue = [[source_tile_x, source_tile_y]];
+	//X and Y of tile in tile grid, not room
+	var queue = [new coordinate(source_tile_x, source_tile_y)];
 	
 	var count = 0;
 	while (array_length(queue) > 0 && count < 100)
@@ -95,19 +98,19 @@ function evaluate_weights()
 	
 		for (var i = 0; i < array_length(queue); i++)
 		{
-			var inds = queue[i];
-			if point_distance(source_tile_x, source_tile_y, inds[0], inds[1]) > max_distance { continue; } 
+			var coord = queue[i];
+			if point_distance(source_tile_x, source_tile_y, coord.x, coord.y) > max_distance { continue; } 
 			
-			var nbs = neighbours(inds[0], inds[1]);
-			var changed_nbs = set_weights(inds[0], inds[1], nbs);
+			var nbs = neighbours(coord.x, coord.y);
+			var changed_nbs = set_weights(coord.x, coord.y, nbs);
 			new_nodes = array_concat(new_nodes, changed_nbs);
 		}
 		
 		queue = new_nodes;
 		array_sort(queue, function(current, next)
 		{
-			var current_node = nodes[current[0]][current[1]];
-			var next_node = nodes[next[0]][next[1]];
+			var current_node = nodes[current.x][current.y];
+			var next_node = nodes[next.x][next.y];
 			return current_node.priority - next_node.priority;
 		});
 		
@@ -126,21 +129,22 @@ function retrace_path()
 			
 			var lowest_weight = noone; //Different from NONE so they don't clash
 			var nbs = neighbours(i, j);
-			var goto_ind = [];
+			var next_nodes = [];
 	
 			for (var k = 0; k < array_length(nbs); k++)
 			{
-				var current_node = nodes[nbs[k][0]][nbs[k][1]];
-				if (current_node.weight > lowest_weight && lowest_weight != noone) { continue; }
+				var current_node = nodes[nbs[k].x][nbs[k].y];
+				if current_node.weight == NONE { continue; }
+				if current_node.weight > lowest_weight && lowest_weight != noone { continue; }
 				
 				if current_node.weight == lowest_weight
-				{ array_push(goto_ind, [current_node.x, current_node.y]); }
-				else { goto_ind = [[current_node.x, current_node.y]]; }
+				{ array_push(next_nodes, new coordinate(current_node.x, current_node.y)); }
+				else { next_nodes = [new coordinate(current_node.x, current_node.y)]; }
 				
 				lowest_weight = current_node.weight;
 			}
 			
-			nodes[i][j].next = goto_ind;
+			nodes[i][j].next_nodes = next_nodes;
 		}
 	}
 }
