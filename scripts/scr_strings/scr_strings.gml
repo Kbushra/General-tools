@@ -1,39 +1,59 @@
-///@func insert_linebreaks(string, width)
-function insert_linebreaks(_string, _width)
+//Special chars must return the amount of chars to skip and
+//take in full string, current character pos and whether to apply effect or not
+
+///@func insert_linebreaks(string, width, monospace, char_spacing_x, [special_chars])
+function insert_linebreaks(_string, _width, _monospace, _char_spacing_x, _special_chars = wrapper_constant(0))
 {
+	var line_width = 0;
+	var word_width = 0;
+	var last_space_pos = 0;
+	
 	for (var curr_char = 1; curr_char <= string_length(_string); curr_char++)
 	{
-		var pre_string = curr_char == 1 ? "" : string_copy(_string, 1, curr_char - 1);
-		var last_linebreak_pos = string_last_pos("\n", pre_string);
-		var last_space_pos = string_last_pos(" ", pre_string);
+		var chars_to_skip = 0;
 		
-		var last_break_pos = max(last_linebreak_pos, last_space_pos);
+		do
+		{	
+			chars_to_skip = _special_chars(_string, curr_char, false);
+			if chars_to_skip > 0 { curr_char += chars_to_skip }
+			if curr_char > string_length(_string) { return _string; }
+		}
+		until chars_to_skip <= 0
 		
-		var post_string = string_copy(_string, curr_char, string_length(_string) - curr_char + 1);
-		var next_linebreak_pos = string_pos("\n", post_string);
-		var next_space_pos = string_pos(" ", post_string);
-		
-		var next_break_pos = 0;
-		if next_linebreak_pos == 0 { next_break_pos = next_space_pos; }
-		else if next_space_pos == 0 { next_break_pos = next_linebreak_pos; }
-		else { next_break_pos = min(next_linebreak_pos, next_space_pos); }
-		
-		if next_break_pos == 0 { next_break_pos = string_length(post_string); }
-		
-		next_break_pos += curr_char - 1;
-		
-		var line_string = string_copy(_string,
-			last_linebreak_pos + 1, next_break_pos - last_linebreak_pos);
-		
-		if string_width(line_string) > _width
+		var letter = string_char_at(_string, curr_char);
+		if letter == "\n"
 		{
-			if last_break_pos != 0
-			{
-				_string = string_delete(_string, last_break_pos, 1);
-				_string = string_insert("\n", _string, last_break_pos);
-			}
+			line_width = 0;
+			word_width = 0;
 			
-			curr_char = next_break_pos + 1;
+			//if curr_char + 2 <= string_length(_string) &&
+			//string_copy(_string, curr_char + 1, 2) != "* "
+			//{
+			//	//Gap made by asterik
+			//	line_width += _monospace ? _char_spacing_x * 2 : string_width("* ");
+			//} 
+			continue;
+		}
+		
+		if letter == " "
+		{
+			line_width += word_width;
+			line_width += _monospace ? _char_spacing_x : string_width(letter);
+			word_width = 0;
+			
+			last_space_pos = curr_char;
+			continue;
+		}
+		
+		//Add gap before next letter
+		if word_width > 0 && !_monospace { word_width += _char_spacing_x; }
+		word_width += _monospace ? _char_spacing_x : string_width(letter);
+		
+		if line_width + word_width > _width && last_space_pos != 0
+		{
+			_string = string_delete(_string, last_space_pos, 1);
+			_string = string_insert("\n", _string, last_space_pos);
+			line_width = word_width;
 		}
 	}
 	
