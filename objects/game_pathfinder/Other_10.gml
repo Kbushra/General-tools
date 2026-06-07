@@ -20,8 +20,8 @@ function neighbours(tile_x, tile_y)
 			if i == 0 && j == 0 { continue; }
 			
 			var free = tile_free(tile_x + i, tile_y + j);
-			var free = free && tile_free(tile_x + i, tile_y);
-			var free = free && tile_free(tile_x, tile_y + j);
+			free = free && tile_free(tile_x + i, tile_y);
+			free = free && tile_free(tile_x, tile_y + j);
 			
 			var x_in_bounds = false;
 			var y_in_bounds = false;

@@ -39,8 +39,8 @@
     "path":"sprites/spr_pathfinder/spr_pathfinder.yy",
   },
   "spriteMaskId":{
-    "name":"spr_frisk_coll_center",
-    "path":"sprites/spr_frisk_coll_center/spr_frisk_coll_center.yy",
+    "name":"spr_pathfinder_coll_center",
+    "path":"sprites/spr_pathfinder_coll_center/spr_pathfinder_coll_center.yy",
   },
   "visible":true,
 }

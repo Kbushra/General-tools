@@ -46,8 +46,8 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":{
-    "name":"spr_frisk_coll",
-    "path":"sprites/spr_frisk_coll/spr_frisk_coll.yy",
+    "name":"spr_ai_coll",
+    "path":"sprites/spr_ai_coll/spr_ai_coll.yy",
   },
   "visible":true,
 }

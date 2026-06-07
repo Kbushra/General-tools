@@ -6,8 +6,8 @@ function wrapper(func)
 {
 	var args = [];
 	for (var i = 1; i < argument_count; i++) { array_push(args, argument[i]); }
-	return method({ func, args, id },
-		function() { with (id) script_execute_ext(other.func, other.args); });
+	return method({ _func: func, _args: args, id },
+		function() { with (id) script_execute_ext(other._func, other._args); });
 }
 
 ///@param func
@@ -18,8 +18,8 @@ function wrapper_return(func)
 {
 	var args = [];
 	for (var i = 1; i < argument_count; i++) { array_push(args, argument[i]); }
-	return method({ func, args, id },
-		function() { with (id) return script_execute_ext(other.func, other.args); });
+	return method({ _func: func, _args: args, id },
+		function() { with (id) return script_execute_ext(other._func, other._args); });
 }
 
 function wrapper_constant(constant)

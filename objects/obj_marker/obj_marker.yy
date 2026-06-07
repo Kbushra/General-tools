@@ -8,8 +8,8 @@
   "name":"obj_marker",
   "overriddenProperties":[],
   "parent":{
-    "name":"Omni-present",
-    "path":"folders/Overworld/Omni-present.yy",
+    "name":"Overworld",
+    "path":"folders/Overworld.yy",
   },
   "parentObjectId":null,
   "persistent":false,

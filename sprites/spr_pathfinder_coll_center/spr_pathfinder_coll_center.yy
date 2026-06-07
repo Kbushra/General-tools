@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_frisk_coll_center",
+  "%Name":"spr_pathfinder_coll_center",
   "bboxMode":0,
   "bbox_bottom":12,
   "bbox_left":0,
@@ -21,19 +21,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"f31e78a7-ff65-40f1-a547-0bdf3e06f9f2","blendMode":0,"displayName":"default","isLocked":false,"name":"f31e78a7-ff65-40f1-a547-0bdf3e06f9f2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_frisk_coll_center",
+  "name":"spr_pathfinder_coll_center",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Collision",
-    "path":"folders/Overworld/Omni-present/Characters/Frisk/Collision.yy",
+    "name":"Overworld",
+    "path":"folders/Overworld.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_frisk_coll_center",
+    "%Name":"spr_pathfinder_coll_center",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_frisk_coll_center",
+    "name":"spr_pathfinder_coll_center",
     "playback":1,
     "playbackSpeed":0.0,
     "playbackSpeedType":0,
@@ -71,7 +71,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9a0b4350-cb0f-4f61-b160-85a30519be65","path":"sprites/spr_frisk_coll_center/spr_frisk_coll_center.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9a0b4350-cb0f-4f61-b160-85a30519be65","path":"sprites/spr_pathfinder_coll_center/spr_pathfinder_coll_center.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"f8998227-4846-4317-9cee-2cf3ed2235d0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

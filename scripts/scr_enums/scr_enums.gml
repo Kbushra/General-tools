@@ -7,6 +7,7 @@ enum player_states
 enum pathfinder_states
 {
 	none,
+	pathroam,
 	freeroam,
 	roam,
 	chase

@@ -1,18 +1,17 @@
 ///Welcome to the new SIGNAL system
 
-///@func send_signal(receiver, signal_name, hold_signal)
+///@func send_signal(receiver, signal_name)
 ///@param receiver {asset}
 ///@param signal_name {string}
-///@param hold_signal {bool}
-///@desc To send a signal to another object, you can choose whether or not you want it to be a hold signal.
-function send_signal(_id, _signal_name, _hold) 
+///@desc To send a signal to another object.
+function send_signal(_id, _signal_name) 
 {
 	if !instance_exists(_id) { return; }
 	
 	var _variable_name = _signal_name + "_signal";
 	
 	if variable_instance_exists(_id, _variable_name)
-	{ variable_instance_set(_id, _variable_name, _hold); exit; }
+	{ variable_instance_set(_id, _variable_name, false); exit; }
 	
 	variable_instance_set(_id, _variable_name, true);
 }
