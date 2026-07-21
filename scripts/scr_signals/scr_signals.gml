@@ -9,10 +9,6 @@ function send_signal(_id, _signal_name)
 	if !instance_exists(_id) { return; }
 	
 	var _variable_name = _signal_name + "_signal";
-	
-	if variable_instance_exists(_id, _variable_name)
-	{ variable_instance_set(_id, _variable_name, false); exit; }
-	
 	variable_instance_set(_id, _variable_name, true);
 }
 
