@@ -70,6 +70,7 @@
     {"id":{"name":"scr_enums","path":"scripts/scr_enums/scr_enums.yy",},},
     {"id":{"name":"scr_instance_creating","path":"scripts/scr_instance_creating/scr_instance_creating.yy",},},
     {"id":{"name":"scr_key_to_string","path":"scripts/scr_key_to_string/scr_key_to_string.yy",},},
+    {"id":{"name":"scr_keys","path":"scripts/scr_keys/scr_keys.yy",},},
     {"id":{"name":"scr_languages","path":"scripts/scr_languages/scr_languages.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
     {"id":{"name":"scr_math_utility","path":"scripts/scr_math_utility/scr_math_utility.yy",},},

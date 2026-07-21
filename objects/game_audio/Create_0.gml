@@ -13,6 +13,8 @@ bus_sfx = audio_bus_create();
 audio_emitter_bus(emitter_bgm, bus_bgm);
 audio_emitter_bus(emitter_sfx, bus_sfx);
 
+streams = {};
+
 log = false;
 if !variable_global_exists("debugMute") global.debugMute = false;
 

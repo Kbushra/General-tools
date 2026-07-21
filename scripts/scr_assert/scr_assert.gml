@@ -1,6 +1,6 @@
 ///@func assert(condition, [desc])
 ///@param condition Condition to assert to be true, else error
-///@param desc Object this is used in
+///@param desc Description
 function assert(condition, desc = "Unknown error. No valid description. Ya dun goofed.", severe = false)
 {
 	if condition { return true; }

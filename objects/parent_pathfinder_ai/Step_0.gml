@@ -3,10 +3,10 @@ cache_write_prop("y", y);
 cache_write_prop("dir", dir);
 cache_write_prop("axis", axis);
 
-if obj_player.state == player_states.freeze
+if obj_player.state == PLAYER_STATES.FREEZE
 { sprite_index = get_sprite(name, "idle"); path_speed = 0; exit; }
 
-if state == pathfinder_states.pathroam
+if state == PATHFINDER_STATES.PATHROAM
 {
 	pathroam_state();
 	exit;
@@ -14,13 +14,13 @@ if state == pathfinder_states.pathroam
 
 path_end();	
 
-if state == pathfinder_states.freeroam
+if state == PATHFINDER_STATES.FREEROAM
 {
 	freeroam_state();
 	exit;
 }
 
-if state != pathfinder_states.chase { exit; }
+if state != PATHFINDER_STATES.CHASE { exit; }
 
 if moving.is_moving()
 {

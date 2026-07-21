@@ -1,12 +1,12 @@
-if target_type == carrier_target.instance && instance_exists(target)
+if target_type == CARRIER_TARGET.INSTANCE && instance_exists(target)
 {
 	switch value_type
 	{
-		case carrier_value.signal:
+		case CARRIER_VALUE.SIGNAL:
 		send_signal(target, name, value);
 		break;
 		
-		case carrier_value.package:
+		case CARRIER_VALUE.PACKAGE:
 		send_package(target, name, value);
 		break;
 	}
@@ -15,5 +15,5 @@ if target_type == carrier_target.instance && instance_exists(target)
 	instance_destroy();
 }
 
-if target_type == carrier_target.place && room == target { send_signal(id, "reached_dest", true); }
+if target_type == CARRIER_TARGET.PLACE && room == target { send_signal(id, "reached_dest", true); }
 if got_signal("reached_dest") && room != target { instance_destroy(); }

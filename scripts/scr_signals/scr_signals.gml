@@ -27,14 +27,14 @@ function send_persistent_signal(_id, _signal_name, _target_type)
 	
 	with (game_carrier)
 	{
-		if value_type == carrier_value.signal && target_type == _target_type &&
+		if value_type == CARRIER_VALUE.SIGNAL && target_type == _target_type &&
 			target == _id && name == _signal_name { value = true; carrier = id; }
 	}
 	
 	if carrier == noone
 	{
 		carrier = instance_create_depth(0, 0, 0, game_carrier,
-			{ name: _signal_name, value: true, value_type: carrier_value.signal,
+			{ name: _signal_name, value: true, value_type: CARRIER_VALUE.SIGNAL,
 				target: _id, target_type: _target_type });
 	}
 	
@@ -50,7 +50,7 @@ function send_persistent_signal(_id, _signal_name, _target_type)
 ///@desc To send a signal to the entire room
 function send_place_signal(_signal_name)
 {
-	return send_persistent_signal(room, _signal_name, carrier_target.place);
+	return send_persistent_signal(room, _signal_name, CARRIER_TARGET.PLACE);
 }
 
 ///@func got_signal(signal_name)
@@ -69,7 +69,7 @@ function got_place_signal(_signal_name)
 {
 	with (game_carrier)
 	{
-		if value_type == carrier_value.signal && target_type == carrier_target.place &&
+		if value_type == CARRIER_VALUE.SIGNAL && target_type == CARRIER_TARGET.PLACE &&
 			room == target && name == _signal_name { return value; }
 	}
 	
@@ -92,7 +92,7 @@ function stop_place_signal(_signal_name)
 {
     with (game_carrier)
 	{
-		if value_type == carrier_value.signal && target_type == carrier_target.place &&
+		if value_type == CARRIER_VALUE.SIGNAL && target_type == CARRIER_TARGET.PLACE &&
 			room == target && name == _signal_name { instance_destroy(); }
 	}
 }

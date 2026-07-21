@@ -12,7 +12,7 @@ function move_selection(selection, limit, dir)
 		selection += game_input.down_pressed - game_input.up_pressed;
 	}
 	
-	if dir == DIAGONAL
+	if dir == GRID
 	{
 		selection += game_input.right_pressed - game_input.left_pressed;
 		selection = clamp(selection, (prev_selection div 2) * 2, (prev_selection div 2) * 2 + 1);
@@ -48,7 +48,7 @@ function draw_list(_x, _y, gap_x, gap_y, selection, dir, list)
 		
 		if dir == HORIZONTAL { col = i; }
 		if dir == VERTICAL { row = i; }
-		if dir == DIAGONAL { col = i % 2; row = i div 2; }
+		if dir == GRID { col = i % 2; row = i div 2; }
 		
 		draw_list_element(_x + col * gap_x, _y + row * gap_y,
 			i == selection, list[i]);

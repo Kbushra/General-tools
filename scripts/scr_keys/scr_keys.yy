@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_audio",
+  "%Name":"scr_keys",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_audio",
+  "name":"scr_keys",
   "parent":{
-    "name":"Managers",
-    "path":"folders/Managers.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -3,9 +3,9 @@
 ///@func roam_transition()
 roam_transition = function()
 {
-	if path != noone { state = pathfinder_states.pathroam; exit; }
+	if path != noone { state = PATHFINDER_STATES.PATHROAM; exit; }
 
-	state = pathfinder_states.freeroam;
+	state = PATHFINDER_STATES.FREEROAM;
 	freeroam_dist = RAND_FREEROAM;
 	freeroam_delay = RAND_FREEROAM;
 	reset_action("freeroam_setup");

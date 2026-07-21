@@ -16,7 +16,7 @@ freeroam_dist = 0;
 freeroam_delay = 0;
 freeroam_x = 0;
 freeroam_y = 0;
-state = pathfinder_states.freeroam;
+state = PATHFINDER_STATES.FREEROAM;
 
 roam_transition();
 freeroam_delay = 0;

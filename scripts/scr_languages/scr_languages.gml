@@ -1,4 +1,46 @@
-function clean_csv_text(text)
+function is_language_string(val)
+{
+	return is_struct(val) && is_instanceof(val, language_string);
+}
+
+function load_if_language_string(val, force = false)
+{
+	return is_language_string(val) ? val.load(force) : val;
+}
+
+function keys_to_language_string(keys)
+{
+	return array_map(keys, function(key) { return new language_string(key); });
+}
+
+function load_language_strings(language_strings, force = false)
+{
+	return array_map(language_strings,
+		method({ force }, function(str) { return load_if_language_string(str, force); }));
+}
+
+function json_follow_path(json, path)
+{
+	json = variable_clone(json, 0);
+	var keys = string_split(path, "/");
+	for (var i = 0; i < array_length(keys); i++)
+	{
+		if string_digits(keys[i]) == keys[i]
+		{
+			if !is_array(json) || real(keys[i]) >= array_length(json) { return NONE; }
+			json = json[real(keys[i])];
+		}
+		else
+		{
+			if !is_struct(json) || json[$ keys[i]] == undefined { return NONE; }
+			json = json[$ keys[i]];
+		}
+	}
+	
+	return json;
+}
+
+function clean_json_text(text)
 {
 	text = string_trim(text);
 	text = string_replace_all(text, "\r", "");
@@ -6,86 +48,53 @@ function clean_csv_text(text)
 	return text;
 }
 
-function load_language_csv(name)
+function replace_json_text(text, format)
 {
-	var _grid = load_csv(name);
-	var _grid_height = ds_grid_height(_grid);
-	var _keys = ds_map_create();
-
-	for (var i = 0; i < _grid_height; i ++)
-	{ ds_map_add(_keys, _grid[# 0, i], i); }
-	
-	return { grid: _grid, keys: _keys };
-}
-
-///@func language_string(key, csv, format args...)
-function language_string(_key, _csv_id) constructor
-{
-	key = _key;
-	csv_id = _csv_id;
-	for (var i = 2; i < argument_count; i++) { format_args[i - 2] = argument[i]; }
-	
-	language = NONE;
-	loaded_string = "";
-	
-	///@func load()
-	load = function()
-	{
-		if language == global.save.language { return loaded_string; }
-		
-		//Will move find_text into here later
-		loaded_string = script_execute_ext(find_text, array_concat([key, csv_id], format_args));
-		language = global.save.language;
-		return loaded_string;
-	}
-}
-
-///@func find_text(key, type, [a], ...)
-///@param key Key for the text to find
-///@param type CSV file to look in
-///@param [a] Variables to substitute in
-///@param ... Variables to substitute in
-function find_text(key, type)
-{
-	var text = "";
-	var translation_keys = noone; var translation_grid = noone;
-	
-	switch (type)
-	{
-		case csv.overworld:
-		translation_keys = global.overworld_keys;
-		translation_grid = global.overworld_grid;
-		break;
-		
-		case csv.battle:
-		translation_keys = global.battle_keys;
-		translation_grid = global.battle_grid;
-		break;
-		
-		case csv.gui:
-		translation_keys = global.gui_keys; 
-		translation_grid = global.gui_grid;
-		break;
-		
-		default:
-		assert(false, "Invalid type given in find_text!");
-		return "";
-	}
-	
-	if translation_keys[? key] == undefined { return key; }
-	
-	text = translation_grid[# 1 + global.config.language, translation_keys[? key]];
-	text = clean_csv_text(text);
-		
-	for (var i = 2; i < argument_count; i++)
-	{
-		//{a} will be replaced with argument[2], {b} with argument[3], etc.
-		text = string_replace_all(text, $"\{{chr(ord("a") + i - 2)}\}", argument[i]);
+	for (var i = 0; i < array_length(format); i++)
+	{	
+		//{0} will be replaced with format[0], {1} with format[1], etc.
+		text = string_replace_all(text, $"\{{i}\}", load_if_language_string(format[i]));
 	}
 		
 	text = string_replace_all(text, "{lb}", "\n");
 	text = string_replace_all(text, "{qt}", "\"");
-		
-	if text == "" { text = "-"; } //Placeholder text
 	return text;
+}
+
+///@func language_array(key, len, [key_start])
+function language_array(_key, _len, _key_start = 1)
+{
+	var arr = [];
+	for (var i = _key_start; i < _len + _key_start; i++)
+	{ arr[i-_key_start] = new language_string($"{_key}/{i}"); }
+	
+	return arr;
+}
+
+///@func language_string(key, format args...)
+function language_string(_key) constructor
+{
+	key = _key;
+	format_args = [];
+	for (var i = 1; i < argument_count; i++) { format_args[i - 1] = argument[i]; }
+	
+	language = NONE;
+	loaded_string = "";
+	
+	///@func load([force])
+	load = function(force = false)
+	{
+		if language == global.config.language && !force { return loaded_string; }
+		language = global.config.language;
+		
+		var text = json_follow_path(global.language_json[global.config.language], key);
+		if text == NONE { text = key; }
+		
+		text = clean_json_text(text);
+		text = replace_json_text(text, format_args);
+		
+		if text == "" { text = "-"; } //Placeholder text
+		loaded_string = text;
+		return loaded_string;
+	}
 }

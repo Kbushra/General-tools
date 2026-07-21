@@ -1,28 +1,28 @@
-enum player_states
+enum PLAYER_STATES
 {
-	normal,
-	freeze
+	NORMAL,
+	FREEZE
 }
 
-enum pathfinder_states
+enum PATHFINDER_STATES
 {
-	none,
-	pathroam,
-	freeroam,
-	roam,
-	chase
+	NOONE,
+	PATHROAM,
+	FREEROAM,
+	ROAM,
+	CHASE
 }
 
-enum carrier_value
+enum CARRIER_VALUE
 {
-	signal,
-	package
+	SIGNAL,
+	PACKAGE
 }
 
-enum carrier_target
+enum CARRIER_TARGET
 {
-	instance,
-	place
+	INSTANCE,
+	PLACE
 }
 
-enum lang { en }
+enum LANG { EN }

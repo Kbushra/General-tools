@@ -1,12 +1,47 @@
+function default_keyboard_binds(struct)
+{
+	struct.keyboard_bind[KEY.UP][0] = vk_up;
+	struct.keyboard_bind[KEY.UP][1] = ord("W");
+	struct.keyboard_bind[KEY.DOWN][0] = vk_down;
+	struct.keyboard_bind[KEY.DOWN][1] = ord("S");
+	struct.keyboard_bind[KEY.LEFT][0] = vk_left;
+	struct.keyboard_bind[KEY.LEFT][1] = ord("A");
+	struct.keyboard_bind[KEY.RIGHT][0] = vk_right;
+	struct.keyboard_bind[KEY.RIGHT][1] = ord("D");
+	
+	struct.keyboard_bind[KEY.CONFIRM][0] = ord("Z");
+	struct.keyboard_bind[KEY.CONFIRM][1] = vk_enter;
+	struct.keyboard_bind[KEY.CANCEL][0] = ord("X");
+	struct.keyboard_bind[KEY.CANCEL][1] = vk_shift;
+	struct.keyboard_bind[KEY.MENU][0] = ord("C");
+	struct.keyboard_bind[KEY.MENU][1] = vk_control;
+	
+	struct.keyboard_bind[KEY.PAUSE][0] = vk_escape;
+	struct.keyboard_bind[KEY.PAUSE][1] = NONE;
+	
+	return struct;
+}
+
 function default_save()
 {
 	var struct =
 	{
 		compatibility_version: 0,
-		language: lang.en,
 		cache: {}
 	};
 	
+	return struct;
+}
+
+function default_config()
+{
+	var struct =
+	{
+		compatibility_version: 0,
+		language: LANG.EN
+	};
+	
+	struct = default_keyboard_binds(struct);
 	return struct;
 }
 

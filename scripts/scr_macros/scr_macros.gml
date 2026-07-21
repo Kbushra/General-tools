@@ -6,16 +6,12 @@
 
 #macro HORIZONTAL 0
 #macro VERTICAL 1
-#macro DIAGONAL 2
-
-#macro RIGHT 0
-#macro LEFT 1
-#macro DOWN 2
-#macro UP 3
+#macro GRID 2
 
 #macro NONE -1
 
 #macro JSON_NAME "save.json"
+#macro CONFIG_NAME "config.json"
 
 #macro DISP_W display_get_width()
 #macro DISP_H display_get_height()

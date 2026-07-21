@@ -13,8 +13,8 @@ function moving_state(_in_x, _in_y) constructor
 	static is_moving = function() { return moving_in_x || moving_in_y; }
 }
 
-function axis_collision(_coll_x, _coll_y) constructor
+function axis_collision(_x_inst, _y_inst) constructor
 {
-	coll_x = _coll_x;
-	coll_y = _coll_y;
+	x_inst = _x_inst;
+	y_inst = _y_inst;
 }
