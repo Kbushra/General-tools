@@ -12,15 +12,12 @@ height = GAME_HEIGHT;
 scale = 1;
 display_set_gui_size(width / scale, height / scale);
 
-window_center();
-
 xoffset = width / 2;
 yoffset = height / 2;
 zoom = 1;
 
 cam_target = obj_player;
 target_lerp_factor = 1;
-target_offset = 10;
 
 target_x = x_start;
 target_y = y_start;
@@ -36,4 +33,8 @@ shake_intensity = 0;
 
 event_user(0);
 
+cam_create();
 cam_set();
+
+window_set_size(GAME_WIDTH * RENDER_SCALE, GAME_HEIGHT * RENDER_SCALE);
+window_center();
