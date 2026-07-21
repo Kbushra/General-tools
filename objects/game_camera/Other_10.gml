@@ -39,6 +39,8 @@ cam_dimensions = function()
 ///@func cam_set_target()
 cam_set_target = function(_target)
 {
+	if !instance_exists(_target) { return; }
+	
 	target_x = _target.x;
 	target_y = _target.y;
 

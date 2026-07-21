@@ -1,7 +1,7 @@
 if keyboard_check_pressed(vk_f4) { window_set_fullscreen(!window_get_fullscreen()); }
 
 draw_set_colour(c_black);
-draw_rectangle(0, 0, GAME_WIDTH_SQUARE, GAME_HEIGHT_SQUARE, false);
+draw_rectangle(0, 0, GUI_W, GUI_H, false);
 draw_set_colour(c_white);
 
 draw_set_halign(fa_middle);

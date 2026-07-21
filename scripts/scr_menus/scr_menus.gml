@@ -4,22 +4,22 @@ function move_selection(selection, limit, dir)
 	
 	if dir == HORIZONTAL
 	{
-		selection += game_input.right_pressed - game_input.left_pressed;
+		selection += global.input_pressed[KEY.RIGHT] - global.input_pressed[KEY.LEFT];
 	}
 	
 	if dir == VERTICAL
 	{
-		selection += game_input.down_pressed - game_input.up_pressed;
+		selection += global.input_pressed[KEY.DOWN] - global.input_pressed[KEY.UP];
 	}
 	
 	if dir == GRID
 	{
-		selection += game_input.right_pressed - game_input.left_pressed;
+		selection += global.input_pressed[KEY.RIGHT] - global.input_pressed[KEY.LEFT];
 		selection = clamp(selection, (prev_selection div 2) * 2, (prev_selection div 2) * 2 + 1);
 		selection = clamp(selection, 0, limit - 1);
 		
 		var intermediate_selection = selection;
-		selection += (game_input.down_pressed - game_input.up_pressed) * 2;
+		selection += (global.input_pressed[KEY.DOWN] - global.input_pressed[KEY.UP]) * 2;
 		
 		if selection < 0 { selection = intermediate_selection; }
 		else if selection >= limit { selection = limit - 1; }

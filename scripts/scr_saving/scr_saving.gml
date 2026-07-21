@@ -38,7 +38,8 @@ function default_config()
 	var struct =
 	{
 		compatibility_version: 0,
-		language: LANG.EN
+		language: LANG.EN,
+		keyboard_bind: []
 	};
 	
 	struct = default_keyboard_binds(struct);

@@ -2,21 +2,16 @@ print("camera created");
 
 image_alpha = 0;
 
-x = obj_player.x;
-y = obj_player.y;
+x_start = x;
+y_start = y;
+cam_x = x;
+cam_y = y;
 
-xstart = x;
-ystart = y;
-
-square = { w: GAME_WIDTH_SQUARE, h: GAME_HEIGHT_SQUARE, gui_scale : 1 };
-
-size = square;
-width = size.w;
-height = size.h;
-scale = size.gui_scale;
+width = GAME_WIDTH;
+height = GAME_HEIGHT;
+scale = 1;
 display_set_gui_size(width / scale, height / scale);
 
-window_set_size(width, height);
 window_center();
 
 xoffset = width / 2;
@@ -24,10 +19,14 @@ yoffset = height / 2;
 zoom = 1;
 
 cam_target = obj_player;
+target_lerp_factor = 1;
 target_offset = 10;
 
-target_x = xstart;
-target_y = ystart;
+target_x = x_start;
+target_y = y_start;
+
+prev_target_x = target_x;
+prev_target_y = target_y;
 
 progress_x = 0;
 progress_y = 0;

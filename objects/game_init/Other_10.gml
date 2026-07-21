@@ -1,6 +1,7 @@
 ///@func init_game()
 init_game = function()
 {
+	instance_create_unique(x, y, depth, game_languages);
 	instance_create_unique(x, y, depth, game_saver);
 	
 	instance_create_unique(x, y, depth, game_input);

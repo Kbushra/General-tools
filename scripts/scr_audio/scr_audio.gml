@@ -30,7 +30,7 @@ function destroy_sound(sound_name)
 function play_bgm(sound, gain = 1, priority = AUDIO_PRIORITY.MUSIC)
 {
 	sound = get_sound(sound);
-	if !instance_exists(game_audio) || audio_is_playing(mus_nobody) { return noone; }
+	if !instance_exists(game_audio) { return noone; }
 	
 	if audio_is_paused(sound) { audio_resume_sound(sound); return sound; }
 	if audio_is_playing(sound) { audio_sound_gain(sound, gain); return sound; }

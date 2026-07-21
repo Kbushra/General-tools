@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_easing",
+  "%Name":"scr_math_easing",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_easing",
+  "name":"scr_math_easing",
   "parent":{
     "name":"Maths",
     "path":"folders/Scripts/Maths.yy",

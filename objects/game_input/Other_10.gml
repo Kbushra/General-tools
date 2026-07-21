@@ -1,13 +1,11 @@
-///@func update_inputs()
-update_inputs = function()
+///@func update_keyboard_inputs()
+update_keyboard_inputs = function()
 {
-	right = keyboard_check(key_right[0]) || keyboard_check(key_right[1]);
-	left = keyboard_check(key_left[0]) || keyboard_check(key_left[1]);
-	down = keyboard_check(key_down[0]) || keyboard_check(key_down[1]);
-	up = keyboard_check(key_up[0]) || keyboard_check(key_up[1]);
-	
-	right_pressed = keyboard_check_pressed(key_right[0]) || keyboard_check_pressed(key_right[1]);
-	left_pressed = keyboard_check_pressed(key_left[0]) || keyboard_check_pressed(key_left[1]);
-	down_pressed = keyboard_check_pressed(key_down[0]) || keyboard_check_pressed(key_down[1]);
-	up_pressed = keyboard_check_pressed(key_up[0]) || keyboard_check_pressed(key_up[1]);
+	for (var i = 0; i < KEY.COUNT; i++)
+	{
+		//These variables can be set to false to stop detecting an input
+		global.input_pressed[i] = key_check_direct(i, KEY_STATE.PRESSED);
+		global.input_held[i] = key_check_direct(i, KEY_STATE.HELD);
+		global.input_released[i] = key_check_direct(i, KEY_STATE.RELEASED);
+	}
 }
