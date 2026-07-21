@@ -23,6 +23,7 @@ xoffset = width / 2;
 yoffset = height / 2;
 zoom = 1;
 
+cam_target = obj_player;
 target_offset = 10;
 
 target_x = xstart;
@@ -30,8 +31,6 @@ target_y = ystart;
 
 progress_x = 0;
 progress_y = 0;
-
-view = 0;
 
 custom = false;
 shake_intensity = 0;

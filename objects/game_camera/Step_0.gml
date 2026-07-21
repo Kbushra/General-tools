@@ -15,9 +15,4 @@ if got_place_signal("goto_spawn")
 	exit;
 }
 
-cam_dimensions();
-cam_target_player();
-cam_ease_pos();
-
-cam_clamp();
-cam_set();
+default_behaviour();
