@@ -12,6 +12,7 @@
     {"name":"Noise","order":10,"path":"folders/Shaders/Noise.yy",},
     {"name":"Triggers","order":3,"path":"folders/Triggers.yy",},
     {"name":"Sprites","order":14,"path":"folders/Triggers/Sprites.yy",},
+    {"name":"UI","order":11,"path":"folders/UI.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"fnt_default","order":10,"path":"fonts/fnt_default/fnt_default.yy",},
@@ -70,6 +71,7 @@
     {"name":"spr_debug","order":7,"path":"sprites/spr_debug/spr_debug.yy",},
     {"name":"spr_init","order":9,"path":"sprites/spr_init/spr_init.yy",},
     {"name":"spr_input","order":3,"path":"sprites/spr_input/spr_input.yy",},
+    {"name":"spr_mouse","order":1,"path":"sprites/spr_mouse/spr_mouse.yy",},
     {"name":"spr_pathfinder","order":5,"path":"sprites/spr_pathfinder/spr_pathfinder.yy",},
     {"name":"spr_saver","order":11,"path":"sprites/spr_saver/spr_saver.yy",},
     {"name":"spr_static_blurred_noise","order":2,"path":"sprites/spr_static_blurred_noise/spr_static_blurred_noise.yy",},

@@ -41,3 +41,15 @@ function setup_text(_font = fnt_default, _color = c_white, _halign = fa_left, _v
 	
 	draw_set_alpha(_alpha);
 }
+
+function draw_self_pos(_x, _y)
+{
+	var prev_x = x;
+	var prev_y = y;
+	x = _x;
+	y = _y;
+	
+	draw_self();
+	x = prev_x;
+	y = prev_y;
+}
