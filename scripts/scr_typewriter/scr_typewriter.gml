@@ -34,25 +34,22 @@ _char_count, _width, _monospace, _actions)
 	var curr_x = _x;
 	var curr_y = _y;
 	
-	for (var curr_char = 1; curr_char <= min(_char_count, string_length(_string)); curr_char++)
+	var curr_char = 1;
+	while (curr_char <= min(_char_count, string_length(_string)))
 	{
-		while string_copy(_string, curr_char, 8) == "[action]" ||
-		string_char_at(_string, curr_char) == "\n"
+		if string_copy(_string, curr_char, 8) == "[action]"
 		{
-			while string_copy(_string, curr_char, 8) == "[action]"
-			{
-				call(array_shift(_actions));
-				_string = string_delete(_string, curr_char, 8);
-				if curr_char > min(_char_count, string_length(_string)) { return _processed_string; }
-			}
+			call(array_shift(_actions));
+			_string = string_delete(_string, curr_char, 8);
+			continue;
+		}
 		
-			while string_char_at(_string, curr_char) == "\n"
-			{
-				curr_x = found_asterisk ? _x + asterisk_width : _x;
-				curr_y += _char_spacing_y;
-				curr_char++;
-				if curr_char > min(_char_count, string_length(_string)) { return _processed_string; }
-			}
+		if string_char_at(_string, curr_char) == "\n"
+		{
+			curr_x = found_asterisk ? _x + asterisk_width : _x;
+			curr_y += _char_spacing_y;
+			curr_char++;
+			continue;
 		}
 		
 		if string_asterisk_line(_string, curr_char) { curr_x = _x; found_asterisk = true; }
@@ -63,6 +60,7 @@ _char_count, _width, _monospace, _actions)
 			_scale, _scale, 0);
 		
 		curr_x += _monospace ? _char_spacing_x : string_width(char) + _char_spacing_x;
+		curr_char++;
 	}
 	
 	return _processed_string;
