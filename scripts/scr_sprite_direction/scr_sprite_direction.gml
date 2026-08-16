@@ -8,21 +8,28 @@ enum DIR
 
 function get_dir_from_angle(angle)
 {
-	return get_dir(lengthdir_x(1, angle), lengthdir_y(1, angle));
+	return get_dir_from_spd(lengthdir_x(1, angle), lengthdir_y(1, angle));
 }
 
-function get_dir(_num_x, _num_y, priority_axis = abs(_num_x) > abs(_num_y) ? HORIZONTAL : VERTICAL)
+function get_dir_from_spd(hsp, vsp,
+priority_axis = abs(hsp) >= abs(vsp) ? HORIZONTAL : VERTICAL, _default = "d") 
 {
-	var _num1 = priority_axis == HORIZONTAL ? _num_x : _num_y;
-	var _num2 = priority_axis == HORIZONTAL ? _num_y : _num_x;
+	if priority_axis == HORIZONTAL
+	{
+		if sign(hsp) == 1 { return "r"; }
+		if sign(hsp) == -1 { return "l"; }
+		if sign(vsp) == 1 { return "d"; }
+		if sign(vsp) == -1 { return "u"; }
+	}
+	else
+	{
+		if sign(vsp) == 1 { return "d"; }
+		if sign(vsp) == -1 { return "u"; }
+		if sign(hsp) == 1 { return "r"; }
+		if sign(hsp) == -1 { return "l"; }
+	}
 	
-	if sign(_num1) == 1 { return priority_axis == HORIZONTAL ? DIR.RIGHT : DIR.DOWN; }
-		else if sign(_num1) == -1 { return priority_axis == HORIZONTAL ? DIR.LEFT : DIR.UP; }
-	
-	if sign(_num2) == 1 { return priority_axis == HORIZONTAL ? DIR.DOWN : DIR.RIGHT; }
-		else if sign(_num2) == -1 { return priority_axis == HORIZONTAL ? DIR.UP : DIR.LEFT; }
-		
-	return DIR.DOWN;
+	return _default;
 }
 
 function get_axis_from_spd(hsp, vsp, _default = HORIZONTAL)
@@ -33,19 +40,18 @@ function get_axis_from_spd(hsp, vsp, _default = HORIZONTAL)
 	return _default;
 }
 
-function get_axis(_dir, _default = HORIZONTAL)
+function get_axis_from_dir(_dir)
 {
 	switch (_dir)
 	{
-		case DIR.RIGHT: case DIR.LEFT: return HORIZONTAL;
-		case DIR.DOWN: case DIR.UP: return VERTICAL;
-		default: return _default;
+		case "r": case "l": return HORIZONTAL;
+		case "d": case "u": return VERTICAL;
 	}
 }
 
 function path_get_dir(priority_axis, path_loops = false)
 {
-	if path_index == NONE { return DIR.DOWN; }
+	if path_index == NONE { return "d"; }
 	
 	var first_pos;
 	var second_pos;
@@ -69,5 +75,5 @@ function path_get_dir(priority_axis, path_loops = false)
 	
 	var x_change = path_get_x(path_index, first_pos) - path_get_x(path_index, second_pos);
 	var y_change = path_get_y(path_index, first_pos) - path_get_y(path_index, second_pos);
-	return get_dir(x_change, y_change, priority_axis);
+	return get_dir_from_spd(x_change, y_change, priority_axis);
 }
