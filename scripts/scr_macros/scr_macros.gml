@@ -1,6 +1,6 @@
-#macro GAME_WIDTH 320
-#macro GAME_HEIGHT 240
-#macro RENDER_SCALE 2
+#macro GAME_WIDTH 720
+#macro GAME_HEIGHT 480
+#macro RENDER_SCALE 1
 
 #macro HORIZONTAL 0
 #macro VERTICAL 1

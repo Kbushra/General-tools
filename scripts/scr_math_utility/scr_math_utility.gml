@@ -128,3 +128,28 @@ function transformed_sin_get_period(_min, _start, _max, _point, _edge = RISE, _p
 	var _period = 360 * _point.x / phase_change;
 	return _period;
 }
+
+function jump_arc(start_point, end_point, jump_height, _x)
+{
+	var _min = start_point.y - jump_height;
+	var _max = (end_point.y > start_point.y) ?
+		end_point.y * 2 - _min : start_point.y * 2 - _min;
+	
+	//Get the normalised position of the point betweeb min and max, then mapping to -1 - 1
+	var start_point_phase = darcsin(2 * inv_lerp(_min, _max, start_point.y) - 1);
+	var end_point_phase = darcsin(2 * inv_lerp(_min, _max, end_point.y) - 1);
+	
+	//When jumping, the side of the starting point is FALL (remember, gamemaker has y top to bottom whilst the graphing of sin has y bottom to top)
+	//If a point's edge is fall, phase must pivot
+	start_point_phase = 180 - start_point_phase;
+	
+	var phase_change = end_point_phase - start_point_phase;
+	while (phase_change <= 0) { phase_change += 360; }
+	
+	var _period = 360 * end_point.x / phase_change;
+	_x *= end_point.x;
+	
+	//Some transformations using period and phase, then normalise
+	var normalised_dsin = (dsin(_x * 360/_period + start_point_phase) + 1)/2;
+	return normalised_dsin * (_max - _min) + _min;
+}

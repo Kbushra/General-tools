@@ -52,6 +52,7 @@
     {"id":{"name":"parent_game","path":"objects/parent_game/parent_game.yy",},},
     {"id":{"name":"parent_pathfinder_ai","path":"objects/parent_pathfinder_ai/parent_pathfinder_ai.yy",},},
     {"id":{"name":"parent_trigger","path":"objects/parent_trigger/parent_trigger.yy",},},
+    {"id":{"name":"trig_freeroam_block","path":"objects/trig_freeroam_block/trig_freeroam_block.yy",},},
     {"id":{"name":"trig_slope","path":"objects/trig_slope/trig_slope.yy",},},
     {"id":{"name":"trig_solid","path":"objects/trig_solid/trig_solid.yy",},},
     {"id":{"name":"trig_spawn","path":"objects/trig_spawn/trig_spawn.yy",},},
