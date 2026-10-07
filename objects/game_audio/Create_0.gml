@@ -15,7 +15,4 @@ audio_emitter_bus(emitter_sfx, bus_sfx);
 
 streams = {};
 
-log = false;
-if !variable_global_exists("debugMute") global.debugMute = false;
-
 event_user(0);

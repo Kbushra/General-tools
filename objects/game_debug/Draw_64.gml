@@ -5,7 +5,6 @@ draw_set_halign(fa_right);
 draw_text_transformed(GAME_WIDTH - 5, 4,
 @"
 Debugging!
-ALT+A to toggle audio log
 P to toggle pathfinder grid
 G to toggle trigger vis
 SPACE to toggle trigger coll

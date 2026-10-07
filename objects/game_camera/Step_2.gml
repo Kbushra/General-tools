@@ -1,3 +1,5 @@
+depth = MANAGER_DEPTH - 1;
+
 if keyboard_check_pressed(vk_f4) { window_set_fullscreen(!window_get_fullscreen()); }
 
 if custom { exit; }
@@ -6,8 +8,8 @@ if got_place_signal("goto_spawn")
 {
 	x = obj_player.x;
 	y = obj_player.y;
-	xstart = x;
-	ystart = y;
+	x_start = x;
+	y_start = y;
 	
 	cam_clamp();
 	cam_set();

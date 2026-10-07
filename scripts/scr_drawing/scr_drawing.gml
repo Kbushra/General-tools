@@ -53,3 +53,9 @@ function draw_self_pos(_x, _y)
 	x = prev_x;
 	y = prev_y;
 }
+
+function draw_set_rgba(_rgba)
+{
+	draw_set_colour(_rgba.rgb);
+	draw_set_alpha(_rgba.a);
+}

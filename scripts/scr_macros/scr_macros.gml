@@ -8,6 +8,8 @@
 
 #macro NONE -1
 
+#macro MANAGER_DEPTH -10000
+
 #macro JSON_NAME "save.json"
 #macro CONFIG_NAME "config.json"
 

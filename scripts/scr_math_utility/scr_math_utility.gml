@@ -1,3 +1,9 @@
+function coordinate(_x, _y) constructor
+{
+	x = _x;
+	y = _y;
+}
+
 function to_time(_total_seconds)
 {
 	var minutes = floor(_total_seconds / 60);
