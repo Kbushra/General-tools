@@ -18,7 +18,7 @@ display_set_gui_size(width * gui_scale, height * gui_scale);
 if os_type == os_gxgames { window_set_size(DISP_W, DISP_H); }
 else { window_set_size(GAME_WIDTH * RENDER_SCALE, GAME_HEIGHT * RENDER_SCALE); }
 
-//if !global.respawn { window_center(); }
+window_center();
 
 xoffset = width / 2;
 yoffset = height / 2;
