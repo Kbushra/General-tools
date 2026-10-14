@@ -135,19 +135,43 @@ function transformed_sin_get_period(_min, _start, _max, _point, _edge = RISE, _p
 	return _period;
 }
 
-function jump_arc(start_point, end_point, jump_height, _x)
+///@param start_point {coordinate struct} Start of jump
+///@param end_point {coordinate struct} End of jump
+///@param jump_height {real} Difference between the extreme point and start point
+///@param _x {real} Progress from 0 to 1
+///@param upwards {boolean} Whether the jump happens upwards or downwards
+function jump_arc(start_point, end_point, jump_height, _x, upwards = true)
 {
-	var _min = start_point.y - jump_height;
-	var _max = (end_point.y > start_point.y) ?
-		end_point.y * 2 - _min : start_point.y * 2 - _min;
+	var _min = 0;
+	var _max = 0;
+	if upwards
+	{
+		_min = start_point.y - jump_height;
+		_max = (end_point.y > start_point.y) ?
+			end_point.y + (end_point.y - _min) : start_point.y + (start_point.y - _min);
+	}
+	else
+	{
+		_max = start_point.y + jump_height;
+		_min = (end_point.y < start_point.y) ?
+			end_point.y + (end_point.y - _max) : start_point.y + (start_point.y - _max);
+	}
+	
+	var start_point_pos = inv_lerp(_min, _max, start_point.y);
+	var end_point_pos = inv_lerp(_min, _max, end_point.y);
+	
+	//Jump arc does not reach the start point or end point (jump height too small)
+	if clamp(start_point_pos, 0, 1) != start_point_pos ||
+		clamp(end_point_pos, 0, 1) != end_point_pos { return 0; }
 	
 	//Get the normalised position of the point betweeb min and max, then mapping to -1 - 1
-	var start_point_phase = darcsin(2 * inv_lerp(_min, _max, start_point.y) - 1);
-	var end_point_phase = darcsin(2 * inv_lerp(_min, _max, end_point.y) - 1);
+	var start_point_phase = darcsin(2 * start_point_pos - 1);
+	var end_point_phase = darcsin(2 * end_point_pos - 1);
 	
-	//When jumping, the side of the starting point is FALL (remember, gamemaker has y top to bottom whilst the graphing of sin has y bottom to top)
+	//When jumping upwards, the side of the starting point is FALL (remember, gamemaker has y top to bottom whilst the graphing of sin has y bottom to top)
 	//If a point's edge is fall, phase must pivot
-	start_point_phase = 180 - start_point_phase;
+	if upwards { start_point_phase = 180 - start_point_phase; }
+	if !upwards { end_point_phase = 180 - end_point_phase; }
 	
 	var phase_change = end_point_phase - start_point_phase;
 	while (phase_change <= 0) { phase_change += 360; }
